@@ -28,13 +28,15 @@ process_name = ['syngas production scenarios', 'syngas production fossil', 'syng
                 'heat production, combined heat and power production',
                 'electricity production, combined heat and power production',
                 'syngas production bio, miscanthus',
-                'jet fuel production, all processes',
+                'jet fuel production, all processes', "jet fuel production fossil",
+                'jet fuel production bio 1',  'jet fuel production bio 2',
+                'jet fuel production bio 3', 'jet fuel production co2', 
                 'direct air capture facility production',
-                'cell production',]
+                'cell production', 'stack production', 'balance of plant production']
 
 
 # in case the process already exists, delets it to avoid errors
-def delet_exprocesses():
+def delete_exprocesses():
     for i in process_name:
         print(i)
         try:
@@ -44,27 +46,79 @@ def delet_exprocesses():
             pass
 
 
-delet_exprocesses()
+delete_exprocesses()
+
+# Inputs
+input_co = eidb.get(name="market for carbon monoxide", location="RER", unit="kilogram")
+input_h2 = eidb.get(name="hydrogen production, steam methane reforming", location="RER", unit="kilogram")
+input_water = eidb.get(name="market for tap water", location="Europe without Switzerland")
+input_oxygen = eidb.get(name="market for oxygen, liquid", location="RER")
+input_miscanthus = eidb.get(name="market for miscanthus, chopped", location="GLO")
+input_electricity_medium = eidb.get(name="market for electricity, medium voltage", location="DE")
+input_heat_CO2 = eidb.get(name="market for heat, district or industrial, natural gas", location="CH")
+input_resin = eidb.get(name="market for anionic resin", location="RER")
+input_water_deionized = eidb.get(name="market for water, deionised", location="Europe without Switzerland")
+input_concrete = eidb.get(name="market for concrete, normal strength", location="CH")
+input_chromsteel_rolled = eidb.get(name="steel production, chromium steel 18/8, hot rolled", location="RER")
+input_aluminium = eidb.get(name="aluminium production, primary, ingot", location="IAI Area, EU27 & EFTA")
+input_steel = eidb.get(name="market for steel, low-alloyed", location="GLO")
+input_copper = eidb.get(name="wire drawing, copper", location="RER")
+input_gravel = eidb.get(name="market for gravel, crushed", location="CH")
+input_gravel_operation = [act for act in eidb if 'gravel and sand quarry operation' in act["name"] and "CH" in act["location"]][0] 
+input_stonewool = eidb.get(name="stone wool production", location="CH")
+input_ethyleneglycol = eidb.get(name="market for ethylene glycol", location="RER")
+input_silicone = eidb.get(name="silicone product production", location="RER")
+input_waste = eidb.get(name="market for inert waste, for final disposal", location="RoW")
+input_waste_ch = eidb.get(name="market for inert waste, for final disposal", location="CH")
+input_lorry_transport = eidb.get(name="transport, freight, lorry 16-32 metric ton, EURO5", location="RER")
+input_transport_train_electricity = eidb.get(name="transport, freight train, electricity", location="Europe without Switzerland")
+input_cerium_oxide = eidb.get(name="market for cerium oxide", location="GLO")
+input_lanthanum_oxide = eidb.get(name="market for lanthanum oxide", location="GLO")
+input_gadolinium_oxide = eidb.get(name="market for gadolinium oxide", location="GLO")
+input_yttrium_oxide = eidb.get(name="market for yttrium oxide", location="GLO")
+input_strontium_carbonate = eidb.get(name="market for strontium carbonate", location="GLO")
+input_iron_oxide_hydroxide = eidb.get(name="market for portafer", location="GLO")
+input_nickel_mix = eidb.get(name="nickel concentrate, 16% Ni to generic market for nickel-rich materials", location="GLO") 
+input_cobalt_hydroxide = eidb.get(name="market for cobalt hydroxide", location="GLO")
+input_zirconium_oxide = eidb.get(name="market for zirconium oxide", location="GLO")
+input_manganese_dioxide = [act for act in eidb if 'manganese dioxide production' in act["name"] and "GLO" in act["location"]][0] 
+input_copper_oxide = eidb.get(name="copper oxide production", location="RER")
+input_nitric_acid = [act for act in eidb if "nitric acid production, product in 50% solution state" in act["name"] and "RER w/o RU" in act["location"]][0]
+input_mek = eidb.get(name="methyl ethyl ketone production", location="RER")
+input_cmc = eidb.get(name="carboxymethyl cellulose production, powder", location="RER")
+input_ethanol = eidb.get(name="market for ethanol, without water, in 99.7% solution state, from ethylene", location="RER")
+input_benzyl_alcohol = eidb.get(name="benzyl alcohol production", location="RER")
+input_sea_transport = eidb.get(name="transport, freight, sea, container ship", location="GLO")
+input_train_transport = eidb.get(name="transport, freight train", location="DE")
+input_electricity_low = eidb.get(name="market for electricity, low voltage", location="DE")
+input_inert_waste_treatment = eidb.get(name="treatment of inert waste, inert material landfill", location="CH")
+input_cast_iron = eidb.get(name="cast iron production", location="RER")
+input_chromium = eidb.get(name="chromium production", location="RER")
+input_titanium = eidb.get(name="market for titanium", location="GLO")
+input_manganese = eidb.get(name="manganese production", location="RER")
+input_cobalt = [act for act in eidb if act["name"] == "cobalt production" and act["location"] == "GLO" and act.get("reference product") == "cobalt"][0]  # from cell production
+input_chromsteel_sheet = eidb.get(name="sheet rolling, chromium steel", location="RER")
+input_natural_gas_heat = eidb.get(name="heat production, natural gas, at industrial furnace low-NOx >100kW", location="Europe without Switzerland")
+input_building_hall = eidb.get(name="building construction, hall, steel construction", location="CH")
+input_building_multistorey = eidb.get(name="building construction, multi-storey", location="RER")
+input_industrial_area = bsdb.get(name="Occupation, industrial area")
+input_area_transformation_from = bsdb.get(name="Transformation, from unspecified")
+input_area_transformation_to = bsdb.get(name="Transformation, to industrial area")
+input_chemicals = eidb.get(name="market for chemical, inorganic", location="GLO")
+input_petroleum_refinery = eidb.get(name="market for petroleum refinery", location="GLO")
+emission_o2 = bsdb.get(name="Oxygen", categories=("air",))
+emission_nitrogen_oxides = bsdb.get(name="Nitrogen oxides", categories=("air",))
+emission_nmvoc = bsdb.get(name="NMVOC, non-methane volatile organic compounds", categories=("air",))
+gas_ext = eidb.get(name="market for natural gas, high pressure", location="DE")
+
+# Factors
+kWh_to_MJ = 3.6
+molmass_h20 = 18.01528  #g/mol
+molmass_h2 = 2.016  #g/mol
+norm_m3_h2 = 0.08988 * 1000  #g http://www.leonland.de/elements_by_price/de/conversion
+roh_biogas = 1.3  #kg/m3 https://www.umweltbundesamt.de/sites/default/files/medien/pdfs/biogas_stoerfallv_1_2_erlaeuterungen.pdf
 
 #------------- DCA production ----------------
-input_DAC_concrete = eidb.get(name="market for concrete, normal strength", location="CH")
-input_DAC_chromsteel = eidb.get(name="steel production, chromium steel 18/8, hot rolled", location="RER")
-input_DAC_alu = eidb.get(name="aluminium production, primary, ingot", location="IAI Area, EU27 & EFTA")
-input_DAC_steel = eidb.get(name="market for steel, low-alloyed", location="GLO")
-# In the paper the use version 3.5 of ecoinvent, in this version the process is not available. 
-# But, the contribution to this was added to the wire drawing process
-# input_DAC_copper = eidb.get(name="copper production, primary", location="RER")
-input_DAC_wire = eidb.get(name="wire drawing, copper", location="RER")
-input_DAC_gravel = eidb.get(name="market for gravel, crushed", location="CH")
-input_DAC_sand = [act for act in eidb if 'gravel and sand quarry operation' in act["name"] and "CH" in act["location"]][0] 
-input_DAC_sand = eidb.get(name="market for gravel, crushed", location="CH")
-input_DAC_stonewool = eidb.get(name="stone wool production", location="CH")
-input_DAC_ethylenglyocol = eidb.get(name="market for ethylene glycol", location="RER")
-input_DAC_silicone = eidb.get(name="silicone product production", location="RER")
-input_DAC_waste = eidb.get(name="market for inert waste, for final disposal", location="CH")
-input_DAC_transportlorry = eidb.get(name="transport, freight, lorry 16-32 metric ton, EURO5", location="RER")
-input_DAC_transporttrain = eidb.get(name="transport, freight train, electricity", location="Europe without Switzerland")
-
 process_DAC = project_af.new_activity(
     code="direct air capture facility production",
     name="direct air capture facility production",
@@ -74,105 +128,105 @@ process_DAC = project_af.new_activity(
 # Technosphere
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_concrete["name"],
-    unit=input_DAC_concrete["unit"],
+    name=input_concrete["name"],
+    unit=input_concrete["unit"],
     amount=34.6666667,  #m3/ unit
-    input=input_DAC_concrete,
+    input=input_concrete,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_chromsteel["name"],
-    unit=input_DAC_chromsteel["unit"],
+    name=input_chromsteel_rolled["name"],
+    unit=input_chromsteel_rolled["unit"],
     amount=36300,  # kg/ unit
-    input=input_DAC_chromsteel,
+    input=input_chromsteel_rolled,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_alu["name"],
-    unit=input_DAC_alu["unit"],
+    name=input_aluminium["name"],
+    unit=input_aluminium["unit"],
     amount=262000,  # kg/ unit
-    input=input_DAC_alu,
+    input=input_aluminium,
 ).save()
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_steel["name"],
-    unit=input_DAC_steel["unit"],
+    name=input_steel["name"],
+    unit=input_steel["unit"],
     amount=303000,  # kg/ unit
-    input=input_DAC_steel,
+    input=input_steel,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_wire["name"],
-    unit=input_DAC_wire["unit"],
+    name=input_copper["name"],
+    unit=input_copper["unit"],
     amount=3400,  # kg/ unit
-    input=input_DAC_wire,
+    input=input_copper,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_gravel["name"],
-    unit=input_DAC_gravel["unit"],
+    name=input_gravel["name"],
+    unit=input_gravel["unit"],
     amount=93100,  # kg/ unit
-    input=input_DAC_gravel,
+    input=input_gravel,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_sand["name"],
-    unit=input_DAC_sand["unit"],
+    name=input_gravel_operation["name"],
+    unit=input_gravel_operation["unit"],
     amount=89600,  # kg/ unit
-    input=input_DAC_sand,
+    input=input_gravel_operation,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_stonewool["name"],
-    unit=input_DAC_stonewool["unit"],
+    name=input_stonewool["name"],
+    unit=input_stonewool["unit"],
     amount=8700,  # kg/unit
-    input=input_DAC_stonewool,
+    input=input_stonewool,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_ethylenglyocol["name"],
-    unit=input_DAC_ethylenglyocol["unit"],
+    name=input_ethyleneglycol["name"],
+    unit=input_ethyleneglycol["unit"],
     amount=15000,  # kg/unit
-    input=input_DAC_ethylenglyocol,
+    input=input_ethyleneglycol,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_silicone["name"],
-    unit=input_DAC_silicone["unit"],
+    name=input_silicone["name"],
+    unit=input_silicone["unit"],
     amount=1100,  # kg/ unit
-    input=input_DAC_silicone,
+    input=input_silicone,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_waste["name"],
-    unit=input_DAC_waste["unit"],
+    name=input_waste_ch["name"],
+    unit=input_waste_ch["unit"],
     amount=243400,  # kg/ unit
-    input=input_DAC_waste,
+    input=input_waste_ch,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_transportlorry["name"],
-    unit=input_DAC_transportlorry["unit"],
+    name=input_lorry_transport["name"],
+    unit=input_lorry_transport["unit"],
     amount=244895 / 1000,  # tkm/ unit
-    input=input_DAC_transportlorry,
+    input=input_lorry_transport,
 ).save()
 
 process_DAC.new_exchange(
     type="technosphere",
-    name=input_DAC_transporttrain["name"],
-    unit=input_DAC_transporttrain["unit"],
+    name=input_transport_train_electricity["name"],
+    unit=input_transport_train_electricity["unit"],
     amount=37412 / 1000,  # tkm/ unit
-    input=input_DAC_transporttrain,
+    input=input_transport_train_electricity,
 ).save()
 
 # Production
@@ -189,35 +243,6 @@ process_DAC.save()
 #----------------------------------------------
 
 #------------- Cell production ----------------
-input_cerium_oxide = eidb.get(name="market for cerium oxide", location="GLO")
-input_lanthanum_oxide = eidb.get(name="market for lanthanum oxide", location="GLO")
-input_gadolinium_oxide = eidb.get(name="market for gadolinium oxide", location="GLO")
-input_yttrium_oxide = eidb.get(name="market for yttrium oxide", location="GLO")
-input_strontium_carbonate = eidb.get(name="market for strontium carbonate", location="GLO")
-# substitute for iron(III) oxide-hydroxide:
-input_iron_oxide_hydroxide = eidb.get(name="market for portafer", location="GLO")
-input_nickel_mix = eidb.get(name="nickel concentrate, 16% Ni to generic market for nickel-rich materials", location="GLO") 
-input_cobalt_hydroxide = eidb.get(name="market for cobalt hydroxide", location="GLO")
-input_zirconium_oxide = eidb.get(name="market for zirconium oxide", location="GLO")
-input_manganese_dioxide = [act for act in eidb if 'manganese dioxide production' in act["name"] and "GLO" in act["location"]][0] 
-input_copper_oxide = eidb.get(name="copper oxide production", location="RER")
-# substitute for nitric acid 98%:
-input_nitric_acid = [act for act in eidb if "nitric acid production, product in 50% solution state" in act["name"] and "RER w/o RU" in act["location"]][0]
-input_mek = eidb.get(name="methyl ethyl ketone production", location="RER")
-input_cmc = eidb.get(name="carboxymethyl cellulose production, powder", location="RER")
-input_ethanol = eidb.get(name="market for ethanol, without water, in 99.7% solution state, from ethylene", location="RER")
-input_benzyl_alcohol = eidb.get(name="benzyl alcohol production", location="RER")
-# Transports
-input_sea_transport = eidb.get(name="transport, freight, sea, container ship", location="GLO")
-input_lorry_transport = eidb.get(name="transport, freight, lorry 16-32 metric ton, EURO5", location="RER")
-input_train_transport = eidb.get(name="transport, freight train", location="DE")
-# Electricity
-input_electricity = eidb.get(name="market for electricity, low voltage", location="DE")
-# Waste treatment
-input_inert_waste_treatment = eidb.get(name="treatment of inert waste, inert material landfill", location="CH")
-output_nitrogen_oxides = bsdb.get(name="Nitrogen oxides", categories=("air",))
-output_nmvoc = bsdb.get(name="NMVOC, non-methane volatile organic compounds", categories=("air",))
-
 process_cell = project_af.new_activity(
     code="cell production",
     name="cell production",
@@ -313,7 +338,6 @@ process_cell.new_exchange(
     input=input_copper_oxide,
 ).save()
 
-# Transports
 process_cell.new_exchange(
     type="technosphere",
     name=input_sea_transport["name"],
@@ -340,10 +364,10 @@ process_cell.new_exchange(
 
 process_cell.new_exchange(
     type="technosphere",
-    name=input_electricity["name"],
-    unit=input_electricity["unit"],
+    name=input_electricity_low["name"],
+    unit=input_electricity_low["unit"],
     amount=0.12,    # kWh/unit
-    input=input_electricity,
+    input=input_electricity_low,
 ).save()
 
 process_cell.new_exchange(
@@ -397,16 +421,18 @@ process_cell.new_exchange(
 # Biosphere
 process_cell.new_exchange(
     type="biosphere",
-    name=output_nitrogen_oxides["name"],
+    name=emission_nitrogen_oxides["name"],
+    unit=emission_nitrogen_oxides["unit"],
     amount=0.00032,  # kg/unit
-    input=output_nitrogen_oxides,
+    input=emission_nitrogen_oxides,
 ).save()
 
 process_cell.new_exchange(
     type="biosphere",
-    name=output_nmvoc["name"],
+    name=emission_nmvoc["name"],
+    unit=emission_nmvoc["unit"],
     amount=0.00638,  # kg/unit
-    input=output_nmvoc,
+    input=emission_nmvoc,
 ).save()
 
 # Production
@@ -425,36 +451,17 @@ process_cell.save()
 # Inputs from the ecoinvent database
 
 # Glass-Ceramic Materials
-#input_glass_cermet = eidb.get(name="market for glass-ceramic", location="GLO")
-    #own source (Harboe et al., 2020), category: glass-ceramic materials
-    # #In order to analyse whether we can implement this in the paper, a manual implementation is needed. # To-Do
+# input_glass_cermet = eidb.get(name="market for glass-ceramic", location="GLO")
+# own source (Harboe et al., 2020), category: glass-ceramic materials
+# In order to analyse whether we can implement this in the paper, a manual implementation is needed. # To-Do
 # Metals
-input_cast_iron = eidb.get(name="cast iron production", location="RER")
-input_chromium = eidb.get(name="chromium production", location="RER")
-input_titanium = eidb.get(name="market for titanium", location="GLO")
-input_manganese = eidb.get(name="manganese production", location="RER")
-input_cobalt = [act for act in eidb if act["name"] == "cobalt production" and act["location"] == "GLO" and act.get("reference product") == "cobalt"][0]  # from cell production
-input_chromium_steel = eidb.get(name="sheet rolling, chromium steel", location="RER")
-
-# Energy
-input_natural_gas_heat = eidb.get(name="heat production, natural gas, at industrial furnace low-NOx >100kW", location="Europe without Switzerland")
-
-# Building Construction
-input_building_hall = eidb.get(name="building construction, hall, steel construction", location="CH")
-input_building_multistorey = eidb.get(name="building construction, multi-storey", location="RER")
-
-# Land Use
-input_industrial_area = bsdb.get(name="Occupation, industrial area")
-input_area_transformation_from = bsdb.get(name="Transformation, from unspecified")
-input_area_transformation_to = bsdb.get(name="Transformation, to industrial area")
-
 process_stack = project_af.new_activity(
     code="stack production",
     name="HT-co-electrolysis stack production",
     unit='unit',
 )
 
-# Technosphere Inputs
+# Technosphere
 process_stack.new_exchange(
     type="technosphere",
     name=input_cast_iron["name"],
@@ -513,13 +520,12 @@ process_stack.new_exchange(
 
 process_stack.new_exchange(
     type="technosphere",
-    name=input_chromium_steel["name"],
-    unit=input_chromium_steel["unit"],
+    name=input_chromsteel_sheet["name"],
+    unit=input_chromsteel_sheet["unit"],
     amount=534,  # kg
-    input=input_chromium_steel,
+    input=input_chromsteel_sheet,
 ).save()
 
-# Transportation
 process_stack.new_exchange(
     type="technosphere",
     name=input_sea_transport["name"],
@@ -544,24 +550,22 @@ process_stack.new_exchange(
     input=input_train_transport,
 ).save()
 
-# Energy Inputs
 process_stack.new_exchange(
     type="technosphere",
-    name=input_electricity["name"],
-    unit=input_electricity["unit"],
+    name=input_electricity_low["name"],
+    unit=input_electricity_low["unit"],
     amount=3611.5,  # kWh
-    input=input_electricity,
+    input=input_electricity_low,
 ).save()
 
 process_stack.new_exchange(
     type="technosphere",
     name=input_natural_gas_heat["name"],
     unit=input_natural_gas_heat["unit"],
-    amount=606,  # kWh
+    amount=606,  # kWh # check, units from ecoinvent are megajoule
     input=input_natural_gas_heat,
 ).save()
 
-# Building Construction and Area Transformation
 process_stack.new_exchange(
     type="technosphere",
     name=input_building_hall["name"],
@@ -602,7 +606,6 @@ process_stack.new_exchange(
     input=input_area_transformation_to,
 ).save()
 
-# Output: HT-co-electrolysis stack
 process_stack.new_exchange(
     type="production",
     name="HT-co-electrolysis stack 150 kW",
@@ -611,33 +614,13 @@ process_stack.new_exchange(
     input=process_stack,
 ).save()
 
-# Finalize process
 process_stack['reference product'] = 'HT-co-electrolysis stack 150 kW'
 process_stack.save()
 # ----------------------------------------------
 
 # ---------- Balance-of-Plant production ------- # To-Do
+
 # ----------------------------------------------
-
-# inputs
-input_co = eidb.get(name="market for carbon monoxide", location="RER", unit="kilogram")
-input_h2 = eidb.get(name="hydrogen production, steam methane reforming", location="RER", unit="kilogram")
-input_water = eidb.get(name="market for tap water", location="Europe without Switzerland")
-input_oxygen = eidb.get(name="market for oxygen, liquid", location="RER")
-input_miscanthus = eidb.get(name="market for miscanthus, chopped", location="GLO")
-input_electrictity = eidb.get(name="market for electricity, medium voltage", location="DE")
-input_heat_CO2 = eidb.get(name="market for heat, district or industrial, natural gas", location="CH")
-
-input_resin = eidb.get(name="market for anionic resin", location="RER")
-input_water_deionized = eidb.get(name="market for water, deionised", location="Europe without Switzerland")
-input_DAC = project_af.get(name="direct air capture facility production")
-emission_o2 = bsdb.get(name="Oxygen", categories=("air",))
-
-# factors
-molmass_h20 = 18.01528  #g/mol
-molmass_h2 = 2.016  #g/mol
-norm_m3_h2 = 0.08988 * 1000  #g http://www.leonland.de/elements_by_price/de/conversion
-roh_biogas = 1.3  #kg/m3 https://www.umweltbundesamt.de/sites/default/files/medien/pdfs/biogas_stoerfallv_1_2_erlaeuterungen.pdf
 
 # ------------ Scenarios - Syngas ----------------
 # --------- Fossil syngas production ------------
@@ -656,7 +639,6 @@ process_syngas_fossil.new_exchange(
     input=input_co,
 ).save()
 
-# Technosphere
 process_syngas_fossil.new_exchange(
     type="technosphere",
     name=input_h2["name"],
@@ -712,17 +694,17 @@ process_syngas_bio.new_exchange(
 
 process_syngas_bio.new_exchange(
     type="technosphere",
-    name=input_electrictity["name"],
-    unit=input_electrictity["unit"],
+    name=input_electricity_medium["name"],
+    unit=input_electricity_medium["unit"],
     amount=0.2055556,  #kWh/ kg(syngas)
-    input=input_electrictity,
+    input=input_electricity_medium,
 ).save()
 
 # Production
 process_syngas_bio.new_exchange(
     type="production",
-    name="syngas bio",
-    unit='kilogramm',
+    name=process_syngas_bio['name'],
+    unit=process_syngas_bio['unit'],
     amount=1,  # kg/ kg(syngas)
     input=process_syngas_bio,
 ).save()
@@ -732,6 +714,8 @@ process_syngas_bio.save()
 
 
 # --------- CO2 syngas production ------------
+input_DAC = project_af.get(name="direct air capture facility production")
+
 process_syngas_CO2 = project_af.new_activity(
     code="syngas production CO2",
     name="syngas production CO2",
@@ -749,10 +733,10 @@ process_syngas_CO2.new_exchange(
 
 process_syngas_CO2.new_exchange(
     type="technosphere",
-    name=input_electrictity["name"],
-    unit=input_electrictity["unit"],
+    name=input_electricity_medium["name"],
+    unit=input_electricity_medium["unit"],
     amount=0.5,  # kWh/kgCO2
-    input=input_electrictity,
+    input=input_electricity_medium,
 ).save()
 
 # To-Do: heat
@@ -772,11 +756,11 @@ process_syngas_CO2.new_exchange(
     input=input_DAC,
 ).save()
 
-# BoP
+# To-Do BoP
 
-# Cells
+# To-Do Cells
 
-# Stack
+# To-Do Stack
 
 process_syngas_CO2.new_exchange(
     type="technosphere",
@@ -787,10 +771,10 @@ process_syngas_CO2.new_exchange(
 ).save()
 
 process_syngas_CO2.new_exchange(type="technosphere",
-    name=input_electrictity["name"],
-    unit=input_electrictity["unit"],
+    name=input_electricity_medium["name"],
+    unit=input_electricity_medium["unit"],
     amount=8.82,  # kWh/ kg(syngas)
-    input=input_electrictity,
+    input=input_electricity_medium,
 ).save()
 
 # Biosphere
@@ -813,6 +797,7 @@ process_syngas_CO2.new_exchange(
 process_syngas_CO2['reference product'] = 'syngas CO2'
 process_syngas_CO2.save()
 
+# --------- Syngas scenarios ------------
 syngas_fossil = project_af.get(name="syngas production fossil")
 syngas_bio_1 = eidb.get(name="synthetic gas production, from wood, at fixed bed gasifier", location="RoW")
 syngas_bio_2 = eidb.get(name="synthetic gas production, from wood, at fluidized bed gasifier", location="RoW")
@@ -825,7 +810,7 @@ process_syngas_scenarios = project_af.new_activity(
     unit='kilogramm',
 )
 
-# Define a named parameter for energy input
+# Define a named parameter for syngas input
 process_syngas_scenarios["parameters"] = {
     "status_fossil_1": int(input("Enter a number between 0 and 1 for status fossil: ")),
     "status_bio_1": int(input("Enter a number between 0 and 1 for status bio 1: ")),
@@ -843,7 +828,7 @@ status_CO2 = process_syngas_scenarios["parameters"]["status_CO2"]
 # Technosphere
 process_syngas_scenarios.new_exchange(
     type="technosphere",
-    name="syngas production fossil",
+    name=syngas_fossil["name"],
     unit=syngas_fossil["unit"],
     amount=12.038517 * status_fossil_1,  # kg/L(Fuel)
     input=syngas_fossil,
@@ -867,7 +852,7 @@ process_syngas_scenarios.new_exchange(
 
 process_syngas_scenarios.new_exchange(
     type="technosphere",
-    name="syngas production bio",
+    name=syngas_bio_3["name"],
     unit=syngas_bio_3["unit"],
     amount=12.038517 * status_bio_3,  # kg/L(Fuel)
     input=syngas_bio_3,
@@ -875,7 +860,7 @@ process_syngas_scenarios.new_exchange(
 
 process_syngas_scenarios.new_exchange(
     type="technosphere",
-    name="syngas production CO2",
+    name=syngas_CO2["name"],
     unit=syngas_CO2["unit"],
     amount=12.038517 * status_CO2,  # kg/L(Fuel)
     input=syngas_CO2,
@@ -894,8 +879,6 @@ process_syngas_scenarios['reference product'] = 'syngas'
 process_syngas_scenarios.save()
 
 #  ------------- Combined Heat and Power Unit ----------------
-gas_ext = eidb.get(name="market for natural gas, high pressure", location="DE")
-
 process_CHPU_heat = project_af.new_activity(
     code="heat production, combined heat and power production",
     name="heat production, combined heat and power production",
@@ -952,12 +935,6 @@ process_CHPU_elect.save()
 # ----------------- Fischer Tropsch Conversion -----------------
 electricity_int = project_af.get(name="electricity production, combined heat and power production")
 syngas_int = project_af.get(name="syngas production scenarios")
-input_FT_chemicals = eidb.get(name="market for chemical, inorganic", location="GLO")
-input_FT_factory = eidb.get(name="market for petroleum refinery", location="GLO")
-input_FT_land = bsdb.get(name="Occupation, industrial area")
-input_FT_landtransffrom = bsdb.get(name="Transformation, from unspecified")
-input_FT_landtransfto = bsdb.get(name="Transformation, to industrial area")
-output_FT_waste = eidb.get(name="market for inert waste, for final disposal", location="RoW") # check
 
 process_FT_h2 = project_af.new_activity(
     code="h2 production, fischer tropsch conversion",
@@ -968,64 +945,64 @@ process_FT_h2 = project_af.new_activity(
 # Auxillary materials
 process_FT_h2.new_exchange(
     type="technosphere",
-    name=input_FT_chemicals["name"],
-    unit=input_FT_chemicals["unit"],
+    name=input_chemicals["name"],
+    unit=input_chemicals["unit"],
     amount=0.07706479,  # kg/ L(Fuel)
-    input=input_FT_chemicals,
+    input=input_chemicals,
 ).save()
 
 process_FT_h2.new_exchange(
     type="technosphere",
-    name=input_FT_factory["name"],
-    unit=input_FT_factory["unit"],
+    name=input_petroleum_refinery["name"],
+    unit=input_petroleum_refinery["unit"],
     amount=1.56E-10,  # unit/ L (Fuel)
-    input=input_FT_factory,
+    input=input_petroleum_refinery,
 ).save()
 
 process_FT_h2.new_exchange(
     type="biosphere",
-    name=input_FT_land["name"],
-    unit=input_FT_land["unit"],
+    name=input_industrial_area["name"],
+    unit=input_industrial_area["unit"],
     amount=0.00154229,  # m2-year/ L (Fuel)
-    input=input_FT_land,
+    input=input_industrial_area,
 ).save()
 
 process_FT_h2.new_exchange(
     type="biosphere",
-    name=input_FT_landtransffrom["name"],
-    unit=input_FT_landtransffrom["unit"],
+    name=input_area_transformation_from["name"],
+    unit=input_area_transformation_from["unit"],
     amount=1.74E-5,  # m2/ L (Fuel)
-    input=input_FT_landtransffrom,
+    input=input_area_transformation_from,
 ).save()
 
 process_FT_h2.new_exchange(
     type="biosphere",
-    name=input_FT_landtransfto["name"],
-    unit=input_FT_landtransfto["unit"],
+    name=input_area_transformation_to["name"],
+    unit=input_area_transformation_to["unit"],
     amount=1.74E-5,  # m2/ L (Fuel)
-    input=input_FT_landtransfto,
+    input=input_area_transformation_to,
 ).save()
 
 process_FT_h2.new_exchange(
     type="biosphere",
-    name=output_FT_waste["name"],
-    unit=output_FT_waste["unit"],
+    name=input_waste["name"],
+    unit=input_waste["unit"],
     amount=-2.88E-3,  # m2/ L (Fuel)
-    input=output_FT_waste,
+    input=input_waste,
 ).save()
 
 # Technosphere
 process_FT_h2.new_exchange(
     type="technosphere",
-    name=input_electrictity["name"],
-    unit=input_electrictity["unit"],
+    name=input_electricity_medium["name"],
+    unit=input_electricity_medium["unit"],
     amount=0.02150107,  # kWh/ L (Fuel)
-    input=input_electrictity,
+    input=input_electricity_medium,
 ).save()
 
 process_FT_h2.new_exchange(
     type="technosphere",
-    name="electricity production, combined heat and power production",
+    name=electricity_int["name"],
     unit=electricity_int["unit"],
     amount=0,  # kWh/ L (Fuel)
     input=electricity_int,
@@ -1033,7 +1010,7 @@ process_FT_h2.new_exchange(
 
 process_FT_h2.new_exchange(
     type="technosphere",
-    name="syngas production scenarios",
+    name=syngas_int["name"],
     unit=syngas_int["unit"],
     amount=0,  # kg/ L (Fuel)
     input=syngas_int,
@@ -1059,59 +1036,59 @@ process_FT_hydrocarbon = project_af.new_activity(
 # Auxillary materials
 process_FT_hydrocarbon.new_exchange(
     type="technosphere",
-    name=input_FT_chemicals["name"],
-    unit=input_FT_chemicals["unit"],
+    name=input_chemicals["name"],
+    unit=input_chemicals["unit"],
     amount=2.218603,  # kg/ L(Fuel)
-    input=input_FT_chemicals,
+    input=input_chemicals,
 ).save()
 
 process_FT_hydrocarbon.new_exchange(
     type="technosphere",
-    name=input_FT_factory["name"],
-    unit=input_FT_factory["unit"],
+    name=input_petroleum_refinery["name"],
+    unit=input_petroleum_refinery["unit"],
     amount=4.49E-9,  # unit/ L (Fuel)
-    input=input_FT_factory,
+    input=input_petroleum_refinery,
 ).save()
 
 process_FT_hydrocarbon.new_exchange(
     type="biosphere",
-    name=input_FT_land["name"],
-    unit=input_FT_land["unit"],
+    name=input_industrial_area["name"],
+    unit=input_industrial_area["unit"],
     amount=0.04428566,  # m2-year/ L (Fuel)
-    input=input_FT_land,
+    input=input_industrial_area,
 ).save()
 
 process_FT_hydrocarbon.new_exchange(
     type="biosphere",
-    name=input_FT_landtransffrom["name"],
-    unit=input_FT_landtransffrom["unit"],
+    name=input_area_transformation_from["name"],
+    unit=input_area_transformation_from["unit"],
     amount=4.99E-4,  # m2/ L (Fuel)
-    input=input_FT_landtransffrom,
+    input=input_area_transformation_from,
 ).save()
 
 process_FT_hydrocarbon.new_exchange(
     type="biosphere",
-    name=input_FT_landtransfto["name"],
-    unit=input_FT_landtransfto["unit"],
+    name=input_area_transformation_to["name"],
+    unit=input_area_transformation_to["unit"],
     amount=4.99E-4,  # m2/ L (Fuel)
-    input=input_FT_landtransfto,
+    input=input_area_transformation_to,
 ).save()
 
 process_FT_hydrocarbon.new_exchange(
     type="technosphere",
-    name=output_FT_waste["name"],
-    unit=output_FT_waste["unit"],
+    name=input_waste["name"],
+    unit=input_waste["unit"],
     amount=-8.27E-2,  # m2/ L (Fuel)
-    input=output_FT_waste,
+    input=input_waste,
 ).save()
 
 # Technosphere
 process_FT_hydrocarbon.new_exchange(
     type="technosphere",
-    name=input_electrictity["name"],
-    unit=input_electrictity["unit"],
+    name=input_electricity_medium["name"],
+    unit=input_electricity_medium["unit"],
     amount=0.61738782,  # kWh/ L (Fuel)
-    input=input_electrictity,
+    input=input_electricity_medium,
 ).save()
 
 process_FT_hydrocarbon.new_exchange(
@@ -1125,7 +1102,7 @@ process_FT_hydrocarbon.new_exchange(
 process_FT_hydrocarbon.new_exchange(
     type="technosphere",
     name="syngas production scenarios",
-    unit=syngas_int["unit"],
+    unit=syngas_int["unit"], # check, will the hardcoded processes work here?
     amount=0,  # kg/ L (Fuel)
     input=syngas_int,
 ).save()
@@ -1350,13 +1327,10 @@ process_HandD_jetfuel.save()
 
 # Processes
 input_syngas=project_af.get(name="syngas production scenarios")
-
 input_CHPU_elect=project_af.get(name="electricity production, combined heat and power production")
 input_CHPU_heat=project_af.get(name="heat production, combined heat and power production")
-
 input_FTC_hydrocarbon=project_af.get(name="hydrocarbon production, fischer tropsch conversion")
 input_FTC_H2=project_af.get(name="h2 production, fischer tropsch conversion")
-
 input_hydro_c1c4=project_af.get(name="c1c4 production, hydrockracking and destillation")
 input_hydro_H2O=project_af.get(name="h2o production, hydrockracking and destillation")
 input_Hydro_naphta=project_af.get(name="naphta production, hydrockracking and destillation")
@@ -1444,11 +1418,472 @@ process_full.new_exchange(
 # Production
 process_full.new_exchange(
     type="production",
-    name="jet fuel, all processes",
-    unit='L',
+    name=process_full["name"],
+    unit=process_full["unit"],
     amount=1,  # L = 0,775 kg
     input=process_full,
 ).save()
 
 process_full['reference product'] = 'jet fuel, all processes'
 process_full.save()
+
+# ----------------- Hardcoded scenarios -----------------
+# bio 1
+process_full_bio1 = project_af.new_activity(
+    code="jet fuel production bio 1",
+    name="jet fuel production bio 1",
+    unit='liter',
+)
+
+# Technosphere
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=syngas_bio_1["name"],
+    unit=syngas_bio_1["unit"],
+    amount=4.1109582,  # kg/ L(Fuel)
+    input=syngas_bio_1,
+).save()
+
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=input_CHPU_heat["name"],
+    unit=input_CHPU_heat["unit"],
+    amount=0.52777778,  # kWh/ L(Fuel)
+    input=input_CHPU_heat,
+).save()
+
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=input_CHPU_elect["name"],
+    unit=input_CHPU_elect["unit"],
+    amount=0.611111,  # kg/L (Fuel)
+    input=input_CHPU_elect,
+).save()
+
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=input_FTC_hydrocarbon["name"],
+    unit=input_FTC_hydrocarbon["unit"],
+    amount=18.4932478,  # kg/L Fuel
+    input=input_FTC_hydrocarbon,
+).save()
+
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=input_FTC_H2["name"],
+    unit=input_FTC_H2["unit"],
+    amount=0.0268128,  # kg/L Fuel
+    input=input_FTC_H2,
+).save()
+
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=input_hydro_c1c4["name"],
+    unit=input_hydro_c1c4["unit"],
+    amount=0.15,  # kg/L Fuel
+    input=input_hydro_c1c4,
+).save()
+
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=input_hydro_H2O["name"],
+    unit=input_hydro_H2O["unit"],
+    amount=2.0937,  # kg/L Fuel
+    input=input_hydro_H2O,
+).save()
+
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=input_Hydro_naphta["name"],
+    unit=input_Hydro_naphta["unit"],
+    amount=0.609,  # L/L Fuel
+    input=input_Hydro_naphta,
+).save()
+
+process_full_bio1.new_exchange(
+    type="technosphere",
+    name=input_hydro_jetfuel["name"],
+    unit=input_hydro_jetfuel["unit"],
+    amount=1,  # L/L
+    input=input_hydro_jetfuel,
+).save()
+
+# Production
+process_full_bio1.new_exchange(
+    type="production",
+    name=process_full_bio1["name"],
+    unit=process_full_bio1["unit"],
+    amount=1,  # L = 0,775 kg
+    input=process_full_bio1,
+).save()
+
+process_full_bio1['reference product'] = 'jet fuel, bio1'
+process_full_bio1.save()
+
+# bio 2
+process_full_bio2 = project_af.new_activity(
+    code="jet fuel production bio 2",
+    name="jet fuel production bio 2",
+    unit='liter',
+)
+
+# Technosphere
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=syngas_bio_2["name"],
+    unit=syngas_bio_2["unit"],
+    amount=4.1109582,  # kg/ L(Fuel)
+    input=syngas_bio_2,
+).save()
+
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=input_CHPU_heat["name"],
+    unit=input_CHPU_heat["unit"],
+    amount=0.52777778,  # kWh/ L(Fuel)
+    input=input_CHPU_heat,
+).save()
+
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=input_CHPU_elect["name"],
+    unit=input_CHPU_elect["unit"],
+    amount=0.611111,  # kg/L (Fuel)
+    input=input_CHPU_elect,
+).save()
+
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=input_FTC_hydrocarbon["name"],
+    unit=input_FTC_hydrocarbon["unit"],
+    amount=18.4932478,  # kg/L Fuel
+    input=input_FTC_hydrocarbon,
+).save()
+
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=input_FTC_H2["name"],
+    unit=input_FTC_H2["unit"],
+    amount=0.0268128,  # kg/L Fuel
+    input=input_FTC_H2,
+).save()
+
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=input_hydro_c1c4["name"],
+    unit=input_hydro_c1c4["unit"],
+    amount=0.15,  # kg/L Fuel
+    input=input_hydro_c1c4,
+).save()
+
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=input_hydro_H2O["name"],
+    unit=input_hydro_H2O["unit"],
+    amount=2.0937,  # kg/L Fuel
+    input=input_hydro_H2O,
+).save()
+
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=input_Hydro_naphta["name"],
+    unit=input_Hydro_naphta["unit"],
+    amount=0.609,  # L/L Fuel
+    input=input_Hydro_naphta,
+).save()
+
+process_full_bio2.new_exchange(
+    type="technosphere",
+    name=input_hydro_jetfuel["name"],
+    unit=input_hydro_jetfuel["unit"],
+    amount=1,  # L/L
+    input=input_hydro_jetfuel,
+).save()
+
+# Production
+process_full_bio2.new_exchange(
+    type="production",
+    name=process_full_bio2["name"],
+    unit=process_full_bio2["unit"],
+    amount=1,  # L = 0,775 kg
+    input=process_full_bio2,
+).save()
+
+process_full_bio2['reference product'] = 'jet fuel, bio2'
+process_full_bio2.save()
+
+# bio 3
+process_full_bio3 = project_af.new_activity(
+    code="jet fuel production bio 3",
+    name="jet fuel production bio 3",
+    unit='liter',
+)
+
+# Technosphere
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=syngas_bio_3["name"],
+    unit=syngas_bio_3["unit"],
+    amount=4.1109582,  # kg/ L(Fuel)
+    input=syngas_bio_3,
+).save()
+
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=input_CHPU_heat["name"],
+    unit=input_CHPU_heat["unit"],
+    amount=0.52777778,  # kWh/ L(Fuel)
+    input=input_CHPU_heat,
+).save()
+
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=input_CHPU_elect["name"],
+    unit=input_CHPU_elect["unit"],
+    amount=0.611111,  # kg/L (Fuel)
+    input=input_CHPU_elect,
+).save()
+
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=input_FTC_hydrocarbon["name"],
+    unit=input_FTC_hydrocarbon["unit"],
+    amount=18.4932478,  # kg/L Fuel
+    input=input_FTC_hydrocarbon,
+).save()
+
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=input_FTC_H2["name"],
+    unit=input_FTC_H2["unit"],
+    amount=0.0268128,  # kg/L Fuel
+    input=input_FTC_H2,
+).save()
+
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=input_hydro_c1c4["name"],
+    unit=input_hydro_c1c4["unit"],
+    amount=0.15,  # kg/L Fuel
+    input=input_hydro_c1c4,
+).save()
+
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=input_hydro_H2O["name"],
+    unit=input_hydro_H2O["unit"],
+    amount=2.0937,  # kg/L Fuel
+    input=input_hydro_H2O,
+).save()
+
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=input_Hydro_naphta["name"],
+    unit=input_Hydro_naphta["unit"],
+    amount=0.609,  # L/L Fuel
+    input=input_Hydro_naphta,
+).save()
+
+process_full_bio3.new_exchange(
+    type="technosphere",
+    name=input_hydro_jetfuel["name"],
+    unit=input_hydro_jetfuel["unit"],
+    amount=1,  # L/L
+    input=input_hydro_jetfuel,
+).save()
+
+# Production
+process_full_bio3.new_exchange(
+    type="production",
+    name=process_full_bio3["name"],
+    unit=process_full_bio3["unit"],
+    amount=1,  # L = 0,775 kg
+    input=process_full_bio3,
+).save()
+
+process_full_bio3['reference product'] = 'jet fuel, bio3'
+process_full_bio3.save()
+
+# CO2
+process_full_co2 = project_af.new_activity(
+    code="jet fuel production co2",
+    name="jet fuel production co2",
+    unit='liter',
+)
+
+# Technosphere
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=syngas_CO2["name"],
+    unit=syngas_CO2["unit"],
+    amount=4.1109582,  # kg/ L(Fuel)
+    input=syngas_CO2,
+).save()
+
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=input_CHPU_heat["name"],
+    unit=input_CHPU_heat["unit"],
+    amount=0.52777778,  # kWh/ L(Fuel)
+    input=input_CHPU_heat,
+).save()
+
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=input_CHPU_elect["name"],
+    unit=input_CHPU_elect["unit"],
+    amount=0.611111,  # kg/L (Fuel)
+    input=input_CHPU_elect,
+).save()
+
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=input_FTC_hydrocarbon["name"],
+    unit=input_FTC_hydrocarbon["unit"],
+    amount=18.4932478,  # kg/L Fuel
+    input=input_FTC_hydrocarbon,
+).save()
+
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=input_FTC_H2["name"],
+    unit=input_FTC_H2["unit"],
+    amount=0.0268128,  # kg/L Fuel
+    input=input_FTC_H2,
+).save()
+
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=input_hydro_c1c4["name"],
+    unit=input_hydro_c1c4["unit"],
+    amount=0.15,  # kg/L Fuel
+    input=input_hydro_c1c4,
+).save()
+
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=input_hydro_H2O["name"],
+    unit=input_hydro_H2O["unit"],
+    amount=2.0937,  # kg/L Fuel
+    input=input_hydro_H2O,
+).save()
+
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=input_Hydro_naphta["name"],
+    unit=input_Hydro_naphta["unit"],
+    amount=0.609,  # L/L Fuel
+    input=input_Hydro_naphta,
+).save()
+
+process_full_co2.new_exchange(
+    type="technosphere",
+    name=input_hydro_jetfuel["name"],
+    unit=input_hydro_jetfuel["unit"],
+    amount=1,  # L/L
+    input=input_hydro_jetfuel,
+).save()
+
+# Production
+process_full_co2.new_exchange(
+    type="production",
+    name=process_full_co2["name"],
+    unit=process_full_co2["unit"],
+    amount=1,  # L = 0,775 kg
+    input=process_full_co2,
+).save()
+
+process_full_co2['reference product'] = 'jet fuel, co2'
+process_full_co2.save()
+
+# Fossil
+process_full_fossil = project_af.new_activity(
+    code="jet fuel production fossil",
+    name="jet fuel production fossil",
+    unit='liter',
+)
+
+# Technosphere
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=syngas_fossil["name"],
+    unit=syngas_fossil["unit"],
+    amount=4.1109582,  # kg/ L(Fuel)
+    input=syngas_fossil,
+).save()
+
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=input_CHPU_heat["name"],
+    unit=input_CHPU_heat["unit"],
+    amount=0.52777778,  # kWh/ L(Fuel)
+    input=input_CHPU_heat,
+).save()
+
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=input_CHPU_elect["name"],
+    unit=input_CHPU_elect["unit"],
+    amount=0.611111,  # kg/L (Fuel)
+    input=input_CHPU_elect,
+).save()
+
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=input_FTC_hydrocarbon["name"],
+    unit=input_FTC_hydrocarbon["unit"],
+    amount=18.4932478,  # kg/L Fuel
+    input=input_FTC_hydrocarbon,
+).save()
+
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=input_FTC_H2["name"],
+    unit=input_FTC_H2["unit"],
+    amount=0.0268128,  # kg/L Fuel
+    input=input_FTC_H2,
+).save()
+
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=input_hydro_c1c4["name"],
+    unit=input_hydro_c1c4["unit"],
+    amount=0.15,  # kg/L Fuel
+    input=input_hydro_c1c4,
+).save()
+
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=input_hydro_H2O["name"],
+    unit=input_hydro_H2O["unit"],
+    amount=2.0937,  # kg/L Fuel
+    input=input_hydro_H2O,
+).save()
+
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=input_Hydro_naphta["name"],
+    unit=input_Hydro_naphta["unit"],
+    amount=0.609,  # L/L Fuel
+    input=input_Hydro_naphta,
+).save()
+
+process_full_fossil.new_exchange(
+    type="technosphere",
+    name=input_hydro_jetfuel["name"],
+    unit=input_hydro_jetfuel["unit"],
+    amount=1,  # L/L
+    input=input_hydro_jetfuel,
+).save()
+
+# Production
+process_full_fossil.new_exchange(
+    type="production",
+    name=process_full_fossil["name"],
+    unit=process_full_fossil["unit"],
+    amount=1,  # L = 0,775 kg
+    input=process_full_fossil,
+).save()
+
+process_full_fossil['reference product'] = 'jet fuel, fossil'
+process_full_fossil.save()
