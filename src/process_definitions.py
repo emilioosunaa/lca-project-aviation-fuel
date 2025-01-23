@@ -421,9 +421,201 @@ process_cell.new_exchange(
 process_cell['reference product'] = 'cell'
 process_cell.save()
 # ----------------------------------------------
-# -------------- Stack production -------------- # To-Do
+# -------------- Stack production --------------
+# Inputs from the ecoinvent database
 
+# Glass-Ceramic Materials
+#input_glass_cermet = eidb.get(name="market for glass-ceramic", location="GLO")
+    #own source (Harboe et al., 2020), category: glass-ceramic materials
+    # #In order to analyse whether we can implement this in the paper, a manual implementation is needed. # To-Do
+# Metals
+input_cast_iron = eidb.get(name="cast iron production", location="RER")
+input_chromium = eidb.get(name="chromium production", location="RER")
+input_titanium = eidb.get(name="market for titanium", location="GLO")
+input_manganese = eidb.get(name="manganese production", location="RER")
+input_cobalt = [act for act in eidb if act["name"] == "cobalt production" and act["location"] == "GLO" and act.get("reference product") == "cobalt"][0]  # from cell production
+input_chromium_steel = eidb.get(name="sheet rolling, chromium steel", location="RER")
+
+# Energy
+input_natural_gas_heat = eidb.get(name="heat production, natural gas, at industrial furnace low-NOx >100kW", location="Europe without Switzerland")
+
+# Building Construction
+input_building_hall = eidb.get(name="building construction, hall, steel construction", location="CH")
+input_building_multistorey = eidb.get(name="building construction, multi-storey", location="RER")
+
+# Land Use
+input_industrial_area = bsdb.get(name="Occupation, industrial area")
+input_area_transformation_from = bsdb.get(name="Transformation, from unspecified")
+input_area_transformation_to = bsdb.get(name="Transformation, to industrial area")
+
+process_stack = project_af.new_activity(
+    code="stack production",
+    name="HT-co-electrolysis stack production",
+    unit='unit',
+)
+
+# Technosphere Inputs
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_cast_iron["name"],
+    unit=input_cast_iron["unit"],
+    amount=414,  # kg
+    input=input_cast_iron,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_chromium["name"],
+    unit=input_chromium["unit"],
+    amount=117,  # kg
+    input=input_chromium,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_titanium["name"],
+    unit=input_titanium["unit"],
+    amount=0.374,  # kg
+    input=input_titanium,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_manganese["name"],
+    unit=input_manganese["unit"],
+    amount=2.84,  # kg
+    input=input_manganese,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_nickel_mix["name"],
+    unit=input_nickel_mix["unit"],
+    amount=19.8,  # kg
+    input=input_nickel_mix,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_lanthanum_oxide["name"],
+    unit=input_lanthanum_oxide["unit"],
+    amount=0.483,  # kg
+    input=input_lanthanum_oxide,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_cobalt["name"],
+    unit=input_cobalt["unit"],
+    amount=1.5,  # kg
+    input=input_cobalt,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_chromium_steel["name"],
+    unit=input_chromium_steel["unit"],
+    amount=534,  # kg
+    input=input_chromium_steel,
+).save()
+
+# Transportation
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_sea_transport["name"],
+    unit=input_sea_transport["unit"],
+    amount=9.89,  # tkm
+    input=input_sea_transport,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_lorry_transport["name"],
+    unit=input_lorry_transport["unit"],
+    amount=55.6,  # tkm
+    input=input_lorry_transport,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_train_transport["name"],
+    unit=input_train_transport["unit"],
+    amount=111,  # tkm
+    input=input_train_transport,
+).save()
+
+# Energy Inputs
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_electricity["name"],
+    unit=input_electricity["unit"],
+    amount=3611.5,  # kWh
+    input=input_electricity,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_natural_gas_heat["name"],
+    unit=input_natural_gas_heat["unit"],
+    amount=606,  # kWh
+    input=input_natural_gas_heat,
+).save()
+
+# Building Construction and Area Transformation
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_building_hall["name"],
+    unit=input_building_hall["unit"],
+    amount=0.029,  # m2
+    input=input_building_hall,
+).save()
+
+process_stack.new_exchange(
+    type="technosphere",
+    name=input_building_multistorey["name"],
+    unit=input_building_multistorey["unit"],
+    amount=0.175,  # m3
+    input=input_building_multistorey,
+).save()
+
+process_stack.new_exchange(
+    type="biosphere",
+    name=input_industrial_area["name"],
+    unit=input_industrial_area["unit"],
+    amount=5.26,  # m2*year
+    input=input_industrial_area,
+).save()
+
+process_stack.new_exchange(
+    type="biosphere",
+    name=input_area_transformation_from["name"],
+    unit=input_area_transformation_from["unit"],
+    amount=0.105,  # m2
+    input=input_area_transformation_from,
+).save()
+
+process_stack.new_exchange(
+    type="biosphere",
+    name=input_area_transformation_to["name"],
+    unit=input_area_transformation_to["unit"],
+    amount=0.105,  # m2
+    input=input_area_transformation_to,
+).save()
+
+# Output: HT-co-electrolysis stack
+process_stack.new_exchange(
+    type="production",
+    name="HT-co-electrolysis stack 150 kW",
+    unit='unit',
+    amount=1,  # Single unit
+    input=process_stack,
+).save()
+
+# Finalize process
+process_stack['reference product'] = 'HT-co-electrolysis stack 150 kW'
+process_stack.save()
 # ----------------------------------------------
+
 # ---------- Balance-of-Plant production ------- # To-Do
 # ----------------------------------------------
 
@@ -1197,7 +1389,7 @@ process_full.new_exchange(
     type="technosphere",
     name=input_CHPU_elect["name"],
     unit=input_CHPU_elect["unit"],
-    amount=0.611111,  # kg/L (Fuel) # check from where?
+    amount=0.611111,  # kg/L (Fuel) 
     input=input_CHPU_elect,
 ).save()
 
@@ -1237,7 +1429,7 @@ process_full.new_exchange(
     type="technosphere",
     name=input_Hydro_naphta["name"],
     unit=input_Hydro_naphta["unit"],
-    amount=0.609,  # kg/L Fuel # check units?
+    amount=0.609,  # L/L Fuel 
     input=input_Hydro_naphta,
 ).save()
 
@@ -1245,7 +1437,7 @@ process_full.new_exchange(
     type="technosphere",
     name=input_hydro_jetfuel["name"],
     unit=input_hydro_jetfuel["unit"],
-    amount=1,  # kg/L Fuel # check
+    amount=1,  # L/L 
     input=input_hydro_jetfuel,
 ).save()
 
