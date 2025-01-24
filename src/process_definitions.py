@@ -784,7 +784,7 @@ process_bop["reference product"] = "Balance-of-plant of HT-co-electrolysis stack
 process_bop.save()
 # ----------------------------------------------
 
-# ------------ Scenarios - Syngas ----------------
+# ------------ Scenarios - Syngas ---------------
 # --------- Fossil syngas production ------------
 process_syngas_fossil = project_af.new_activity(
     code="syngas production fossil",
@@ -877,6 +877,7 @@ process_syngas_bio.save()
 
 # --------- CO2 syngas production ------------
 input_DAC = project_af.get(name="direct air capture facility production")
+factor_CO2 = 1.38  # kgCO2/kgSyngas # check
 
 process_syngas_CO2 = project_af.new_activity(
     code="syngas production CO2",
@@ -889,7 +890,7 @@ process_syngas_CO2.new_exchange(
     type="technosphere",
     name=input_resin["name"],
     unit=input_resin["unit"],
-    amount=3.75E-3,  # kg/kgCO2
+    amount=3.75E-3 * factor_CO2,  # kg/kgCO2
     input=input_resin,
 ).save()
 
@@ -897,7 +898,7 @@ process_syngas_CO2.new_exchange(
     type="technosphere",
     name=input_electricity_medium["name"],
     unit=input_electricity_medium["unit"],
-    amount=0.5,  # kWh/kgCO2
+    amount=0.5 * factor_CO2,  # kWh/kgCO2
     input=input_electricity_medium,
 ).save()
 
@@ -906,7 +907,7 @@ process_syngas_CO2.new_exchange(
     type="technosphere",
     name=input_heat_CO2["name"],
     unit=input_heat_CO2["unit"],
-    amount=1.5,  # kWh/kgCO2
+    amount=1.5 * factor_CO2,  # kWh/kgCO2
     input=input_heat_CO2,
 ).save()
 
@@ -914,15 +915,9 @@ process_syngas_CO2.new_exchange(
     type="technosphere",
     name=input_DAC["name"],
     unit=input_DAC["unit"],
-    amount=9.3E-8,  # kWh/kgCO2
+    amount=9.3E-8 * factor_CO2,  # kWh/kgCO2
     input=input_DAC,
 ).save()
-
-# To-Do BoP
-
-# To-Do Cells
-
-# To-Do Stack
 
 process_syngas_CO2.new_exchange(
     type="technosphere",
@@ -932,11 +927,36 @@ process_syngas_CO2.new_exchange(
     input=input_water_deionized,
 ).save()
 
-process_syngas_CO2.new_exchange(type="technosphere",
+process_syngas_CO2.new_exchange(
+    type="technosphere",
     name=input_electricity_medium["name"],
     unit=input_electricity_medium["unit"],
     amount=8.82,  # kWh/ kg(syngas)
     input=input_electricity_medium,
+).save()
+
+process_syngas_CO2.new_exchange(
+    type="technosphere",
+    name=process_cell["name"],
+    unit=process_cell["unit"],
+    amount=0.002,  # units/ kg(syngas)
+    input=process_cell,
+).save()
+
+process_syngas_CO2.new_exchange(
+    type="technosphere",
+    name=process_stack["name"],
+    unit=process_stack["unit"],
+    amount=1.4E-06,  # units/ kg(syngas)
+    input=process_stack,
+).save()
+
+process_syngas_CO2.new_exchange(
+    type="technosphere",
+    name=process_bop["name"],
+    unit=process_bop["unit"],
+    amount=3.4E-07,  # units/ kg(syngas)
+    input=process_bop,
 ).save()
 
 # Biosphere
