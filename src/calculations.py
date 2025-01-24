@@ -1,7 +1,5 @@
 import bw2data as bd
 import bw2calc as bc
-import bw2io as bi
-import bw2analyzer as bwa
 import pandas as pd
 
 # Import databases
@@ -12,20 +10,7 @@ project_af = bd.Database("project_af")
 
 # Definition of the functional unit
 jet_fuel_all = project_af.get(name='jet fuel production, all processes')
-jet_fuel_fossil = project_af.get(name='jet fuel production fossil')
-jet_fuel_bio1 = project_af.get(name='jet fuel production bio 1')
-jet_fuel_bio2 = project_af.get(name='jet fuel production bio 2')
-jet_fuel_bio3 = project_af.get(name='jet fuel production bio 3')
-jet_fuel_co2 = project_af.get(name='jet fuel production co2')
-
 fu = {jet_fuel_all:1}
-functional_units = {
-    "jet_fuel_fossil": {jet_fuel_fossil.id: 1},
-    "jet_fuel_bio1": {jet_fuel_bio1.id: 1},
-    "jet_fuel_bio2": {jet_fuel_bio2.id: 1},
-    "jet_fuel_bio3": {jet_fuel_bio3.id: 1},
-    "jet_fuel_co2": {jet_fuel_co2.id: 1},
-}
 
 # Definition of the impact categories
 climate_change_categories = [met for met in bd.methods if 'EF v3.1 no LT' in str(met)]
@@ -53,21 +38,3 @@ for m in list(climate_change_categories):
     df.columns = [m, 'Exchange']
     print(df)
 
-
-# Multi-LCA
-
-config = {
-    "impact_categories": chosen_methods,
-}
-
-data_objs = bd.get_multilca_data_objs(
-    functional_units=functional_units, method_config=config
-)
-
-
-mlca = bc.MultiLCA(demands=functional_units, method_config=config, data_objs=data_objs)
-mlca.lci()
-mlca.lcia()
-
-# To-Do: improve the output of the Multi-LCA
-print(mlca.scores)
