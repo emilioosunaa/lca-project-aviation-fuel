@@ -1,14 +1,9 @@
 import bw2data as bd  # for everything related to the database
-import bw2calc as bc  # for the actual LCA calculations
-import bw2analyzer as bwa
 
 # Lists all projects and then sets current project as LCA_EPE
 bd.projects.set_current("LCA_EPE")
-
-# Import of bio- and technosphere.
 eidb = bd.Database("ecoinvent-3.10-cutoff")
 bsdb = bd.Database("ecoinvent-3.10-biosphere")
-
 project_af = bd.Database('project_af')
 data = {}  # we start with no data, so data is empty
 project_af.write(data)
@@ -32,7 +27,7 @@ process_name = ['syngas production scenarios', 'syngas production fossil', 'syng
                 'jet fuel production bio 1',  'jet fuel production bio 2',
                 'jet fuel production bio 3', 'jet fuel production co2', 
                 'direct air capture facility production',
-                'cell production', 'stack production', 'balance of plant production']
+                'cell production', 'stack production', 'HT co-electrolysis balance of plant']
 
 
 # in case the process already exists, delets it to avoid errors
@@ -45,7 +40,6 @@ def delete_exprocesses():
         except:
             pass
 
-
 delete_exprocesses()
 
 # Inputs
@@ -54,6 +48,7 @@ input_h2 = eidb.get(name="hydrogen production, steam methane reforming", locatio
 input_water = eidb.get(name="market for tap water", location="Europe without Switzerland")
 input_oxygen = eidb.get(name="market for oxygen, liquid", location="RER")
 input_miscanthus = eidb.get(name="market for miscanthus, chopped", location="GLO")
+input_electricity_low = eidb.get(name="market for electricity, low voltage", location="DE")
 input_electricity_medium = eidb.get(name="market for electricity, medium voltage", location="DE")
 input_heat_CO2 = eidb.get(name="market for heat, district or industrial, natural gas", location="CH")
 input_resin = eidb.get(name="market for anionic resin", location="RER")
@@ -90,7 +85,6 @@ input_ethanol = eidb.get(name="market for ethanol, without water, in 99.7% solut
 input_benzyl_alcohol = eidb.get(name="benzyl alcohol production", location="RER")
 input_sea_transport = eidb.get(name="transport, freight, sea, container ship", location="GLO")
 input_train_transport = eidb.get(name="transport, freight train", location="DE")
-input_electricity_low = eidb.get(name="market for electricity, low voltage", location="DE")
 input_inert_waste_treatment = eidb.get(name="treatment of inert waste, inert material landfill", location="CH")
 input_cast_iron = eidb.get(name="cast iron production", location="RER")
 input_chromium = eidb.get(name="chromium production", location="RER")
@@ -106,6 +100,12 @@ input_area_transformation_from = bsdb.get(name="Transformation, from unspecified
 input_area_transformation_to = bsdb.get(name="Transformation, to industrial area")
 input_chemicals = eidb.get(name="market for chemical, inorganic", location="GLO")
 input_petroleum_refinery = eidb.get(name="market for petroleum refinery", location="GLO")
+input_chromsteel = eidb.get(name="steel production, electric, chromium steel 18/8", location="RER")
+input_wastewater_treatment = eidb.get(name="treatment of wastewater, unpolluted, wastewater treatment",location="CH")
+input_passenger_car = eidb.get(name="transport, passenger car, large size, diesel, EURO 5", location="RER")
+input_heat_fuel_oil = eidb.get(name="heat production, light fuel oil, at boiler 100kW condensing, non-modulating", location="CH")
+input_cogen_unit = eidb.get(name="construction work, heat and power co-generation unit, 160kW electrical", location="RER")
+input_inverter = eidb.get(name="inverter production, 500kW", location="RER")
 emission_o2 = bsdb.get(name="Oxygen", categories=("air",))
 emission_nitrogen_oxides = bsdb.get(name="Nitrogen oxides", categories=("air",))
 emission_nmvoc = bsdb.get(name="NMVOC, non-methane volatile organic compounds", categories=("air",))
@@ -562,7 +562,7 @@ process_stack.new_exchange(
     type="technosphere",
     name=input_natural_gas_heat["name"],
     unit=input_natural_gas_heat["unit"],
-    amount=606,  # kWh # check, units from ecoinvent are megajoule
+    amount=606 * kWh_to_MJ,  # kWh # check, units from ecoinvent are megajoule
     input=input_natural_gas_heat,
 ).save()
 
@@ -618,8 +618,170 @@ process_stack['reference product'] = 'HT-co-electrolysis stack 150 kW'
 process_stack.save()
 # ----------------------------------------------
 
-# ---------- Balance-of-Plant production ------- # To-Do
+# ---------- Balance-of-Plant production -------
+process_bop = project_af.new_activity(
+    code="HT co-electrolysis balance of plant",
+    name="HT co-electrolysis balance of plant",
+    unit="unit",
+)
 
+# Technosphere
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_chromsteel["name"],
+    unit=input_chromsteel["unit"],
+    amount=1875,  # kg
+    input=input_chromsteel
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_chromsteel_sheet["name"],
+    unit=input_chromsteel_sheet["unit"],
+    amount=1875,  # kg
+    input=input_chromsteel_sheet
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_water["name"],
+    unit=input_water["unit"],
+    amount=4086,  # kg
+    input=input_water
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_wastewater_treatment["name"],
+    unit=input_wastewater_treatment["unit"],
+    amount=4.09,  # m3
+    input=input_wastewater_treatment
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_lorry_transport["name"],
+    unit=input_lorry_transport["unit"],
+    amount=188,  # tkm
+    input=input_lorry_transport
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_train_transport["name"],
+    unit=input_train_transport["unit"],
+    amount=375,  # tkm
+    input=input_train_transport
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_passenger_car["name"],
+    unit=input_passenger_car["unit"],
+    amount=3600,  # km
+    input=input_passenger_car
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_electricity_low["name"],
+    unit=input_electricity_low["unit"],
+    amount=1440,  # kWh
+    input=input_electricity_low
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_electricity_medium["name"],
+    unit=input_electricity_medium["unit"],
+    amount=7242,  # kWh
+    input=input_electricity_medium
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_natural_gas_heat["name"],
+    unit=input_natural_gas_heat["unit"],
+    amount=3535 * kWh_to_MJ,  # MJ
+    input=input_natural_gas_heat
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_heat_fuel_oil["name"],
+    unit=input_heat_fuel_oil["unit"],
+    amount=3000 * kWh_to_MJ,  # MJ
+    input=input_heat_fuel_oil
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_building_hall["name"],
+    unit=input_building_hall["unit"],
+    amount=0.672,  # m2
+    input=input_building_hall
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_building_multistorey["name"],
+    unit=input_building_multistorey["unit"],
+    amount=4.08,   # m3
+    input=input_building_multistorey
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_cogen_unit["name"],
+    unit=input_cogen_unit["unit"],
+    amount=4.2,    # piece
+    input=input_cogen_unit
+).save()
+
+process_bop.new_exchange(
+    type="technosphere",
+    name=input_inverter["name"],
+    unit=input_inverter["unit"],
+    amount=0.3,    # piece
+    input=input_inverter
+).save()
+
+# Biosphere
+process_bop.new_exchange(
+    type="biosphere",
+    name=input_area_transformation_from["name"],
+    unit=input_area_transformation_from["unit"],
+    amount=2.42,  # m2
+    input=input_area_transformation_from
+).save()
+
+process_bop.new_exchange(
+    type="biosphere",
+    name=input_industrial_area["name"],
+    unit=input_industrial_area["unit"],
+    amount=121,   # m2*y
+    input=input_industrial_area
+).save()
+
+process_bop.new_exchange(
+    type="biosphere",
+    name=input_area_transformation_to["name"],
+    unit=input_area_transformation_to["unit"],
+    amount=2.42,  # m2
+    input=input_area_transformation_to
+).save()
+
+# Production
+process_bop.new_exchange(
+    type="production",
+    name=process_bop["name"],
+    unit="unit",
+    amount=1,
+    input=process_bop
+).save()
+
+process_bop["reference product"] = "Balance-of-plant of HT-co-electrolysis stack 150 kW"
+process_bop.save()
 # ----------------------------------------------
 
 # ------------ Scenarios - Syngas ----------------
