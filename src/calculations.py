@@ -1,39 +1,37 @@
-#imports brightway packages
-import bw2data as bd  # for everything related to the database
-import bw2calc as bc  # for the actual LCA calculations
+import bw2data as bd
+import bw2calc as bc
 import bw2io as bi
 import bw2analyzer as bwa
 import pandas as pd
 
-# sets current project as LCA_EPE
+# Import databases
 bd.projects.set_current("LCA_EPE")
-
-# import of bio- and technosphere.
 eidb = bd.Database("ecoinvent-3.10-cutoff")
 bsdb = bd.Database("ecoinvent-3.10-biosphere")
 project_af = bd.Database("project_af")
 
-# multi-LCA
-aviationfuel_syngas = project_af.get(name='jet fuel production, all processes')
+# Definition of the functional unit
+jet_fuel_all = project_af.get(name='jet fuel production, all processes')
+jet_fuel_fossil = project_af.get(name='jet fuel production fossil')
+jet_fuel_bio1 = project_af.get(name='jet fuel production bio 1')
+jet_fuel_bio2 = project_af.get(name='jet fuel production bio 2')
+jet_fuel_bio3 = project_af.get(name='jet fuel production bio 3')
+jet_fuel_co2 = project_af.get(name='jet fuel production co2')
 
+fu = {jet_fuel_all:1}
 functional_units = {
-    "aviation_fuel": {aviationfuel_syngas.id: 1}
+    "jet_fuel_fossil": {jet_fuel_fossil.id: 1},
+    "jet_fuel_bio1": {jet_fuel_bio1.id: 1},
+    "jet_fuel_bio2": {jet_fuel_bio2.id: 1},
+    "jet_fuel_bio3": {jet_fuel_bio3.id: 1},
+    "jet_fuel_co2": {jet_fuel_co2.id: 1},
 }
 
-fu = {aviationfuel_syngas:1}
-
+# Definition of the impact categories
 climate_change_categories = [met for met in bd.methods if 'EF v3.1 no LT' in str(met)]
 chosen_methods = climate_change_categories
 
-
-config = {
-    "impact_categories": chosen_methods,
-}
-
-data_objs = bd.get_multilca_data_objs(
-    functional_units=functional_units, method_config=config
-)
-
+# Single-LCA
 for m in list(climate_change_categories):
     lcabev = bc.LCA(fu, m)
 
@@ -42,7 +40,7 @@ for m in list(climate_change_categories):
     lcabev.score
 
     results = []
-    for exc in aviationfuel_syngas.technosphere():  # search for all technosphere exchanges in the "transport, passenger car, electric" process
+    for exc in jet_fuel_all.technosphere():  # search for all technosphere exchanges in the "transport, passenger car, electric" process
         lcabev.redo_lcia(
             {exc.input.id: exc['amount']})  # Redo lca for each technosphere exchanges with the corresponding amount
         results.append(
@@ -56,12 +54,20 @@ for m in list(climate_change_categories):
     print(df)
 
 
+# Multi-LCA
+
+config = {
+    "impact_categories": chosen_methods,
+}
+
+data_objs = bd.get_multilca_data_objs(
+    functional_units=functional_units, method_config=config
+)
 
 
+mlca = bc.MultiLCA(demands=functional_units, method_config=config, data_objs=data_objs)
+mlca.lci()
+mlca.lcia()
 
-
-# mlca = bc.MultiLCA(demands=functional_units, method_config=config, data_objs=data_objs)
-# mlca.lci()
-# mlca.lcia()
-
-# print(mlca.scores)
+# To-Do: improve the output of the Multi-LCA
+print(mlca.scores)
