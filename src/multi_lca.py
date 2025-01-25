@@ -46,10 +46,9 @@ scores = mlca.scores
 records = []
 for key, value in mlca.scores.items():
     impact_hierarchy, functional_unit = key
-    impact_category = ' > '.join(impact_hierarchy)
     records.append({
         'Functional Unit': functional_unit,
-        'Impact Category': impact_category,
+        'Impact Category': impact_hierarchy[1], # Only the name of the impact category
         'Score': value
     })
 df_scores = pd.DataFrame(records)
@@ -63,4 +62,5 @@ plt.xlabel('Impact Score')
 plt.title('Impact Categories per Functional Unit')
 plt.legend(title='Functional Units', bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.tight_layout()
+plt.savefig("plots//multilca_impact_categories_per_functional_unit.png", dpi=300, bbox_inches='tight')
 plt.show()
