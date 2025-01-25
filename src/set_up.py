@@ -1,20 +1,13 @@
-#Import of Brightway to build coding-enviroment.
 import bw2io as bi
+import bw2data as bd
+
 FILEPATH = "lca-epe-databases.tar.gz"
 bi.restore_project_directory(fp=FILEPATH, project_name="LCA_EPE", overwrite_existing=True)
-
-#imports brightway packages
-import bw2data as bd  # for everything related to the database
-import bw2calc as bc  # for the actual LCA calculations
-import bw2analyzer as bwa
 
 #Lists all projects and then sets current project as LCA_EPE
 bd.projects  # if this list does not include LCA_EPE, please take another look at the welcome.ipynb notebook
 bd.projects.set_current("LCA_EPE")
-#del bd.databases["project_af"]
 print(bd.databases)
-
-#del bd.databases["project_af"]
 
 #Import of bio- and technosphere.
 eidb = bd.Database("ecoinvent-3.10-cutoff")
