@@ -55,5 +55,5 @@ for category in climate_change_categories:
 # Convert results to DataFrames for better reporting
 df_contribution_analysis = pd.DataFrame(contribution_analysis_results)
 df_supply_chain_analysis = pd.DataFrame(supply_chain_analysis_results)
-df_contribution_analysis.to_csv("data\contribution_analysis_results.csv", index=False)
-df_supply_chain_analysis.to_csv("data\supply_chain_analysis_results.csv", index=False)
+df_contribution_analysis.to_csv("data\\contribution_analysis_results.csv", index=False)
+df_supply_chain_analysis.to_csv("data\\supply_chain_analysis_results.csv", index=False)
