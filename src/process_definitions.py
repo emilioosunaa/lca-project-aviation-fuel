@@ -562,7 +562,7 @@ process_stack.new_exchange(
     type="technosphere",
     name=input_natural_gas_heat["name"],
     unit=input_natural_gas_heat["unit"],
-    amount=606 * kWh_to_MJ,  # kWh # check, units from ecoinvent are megajoule
+    amount=606 * kWh_to_MJ,  # MJ
     input=input_natural_gas_heat,
 ).save()
 
@@ -877,7 +877,7 @@ process_syngas_bio.save()
 
 # --------- CO2 syngas production ------------
 input_DAC = project_af.get(name="direct air capture facility production")
-factor_CO2 = 1.38  # kgCO2/kgSyngas # check
+factor_CO2 = 1.38  # kgCO2/kgSyngas
 
 process_syngas_CO2 = project_af.new_activity(
     code="syngas production CO2",
@@ -1284,7 +1284,7 @@ process_FT_hydrocarbon.new_exchange(
 process_FT_hydrocarbon.new_exchange(
     type="technosphere",
     name="syngas production scenarios",
-    unit=syngas_int["unit"], # check, will the hardcoded processes work here?
+    unit=syngas_int["unit"],
     amount=0,  # kg/ L (Fuel)
     input=syngas_int,
 ).save()
