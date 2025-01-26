@@ -16,10 +16,10 @@ bd.Database('project_af').metadata['depends'] = ['ecoinvent-3.10-biosphere',
 process_name = ['syngas production scenarios', 'syngas production fossil', 'syngas production bio',
                 'syngas production CO2', 'h2 production, fischer tropsch conversion',
                 'syncrude production, fischer tropsch conversion',
-                'h2o production, hydrockracking and destillation',
-                'naphta production, hydrockracking and destillation',
-                'c1c4 production, hydrockracking and destillation',
-                'jet fuel production, hydrockracking and destillation',
+                'h2o production, hydrocracking and destillation',
+                'naphta production, hydrocracking and destillation',
+                'c1c4 production, hydrocracking and destillation',
+                'jet fuel production, hydrocracking and destillation',
                 'heat production, combined heat and power production',
                 'electricity production, combined heat and power production',
                 'syngas production bio, miscanthus',
@@ -976,7 +976,7 @@ process_syngas_CO2.new_exchange(
     type="technosphere",
     name=process_cell["name"],
     unit=process_cell["unit"],
-    amount=0.002,  # units/ kg(syngas)
+    amount=0.00203,  # units/ kg(syngas)
     input=process_cell,
 ).save()
 
@@ -1003,6 +1003,8 @@ process_syngas_CO2.new_exchange(type='biosphere',
     amount=1.15,  # kg/kg(syngas)
     input=emission_o2,
     ).save()
+
+# To-Do: CO2 negative emissions because of DAC
 
 # Production
 process_syngas_CO2.new_exchange(
@@ -1482,7 +1484,6 @@ process_CHPU_elect.new_exchange(
     input=gas_ext,
 ).save()
 
-# To-Do: CHPU unit
 process_CHPU_elect.new_exchange(
     type="technosphere",
     name=process_CHPUO["name"],
@@ -1689,14 +1690,14 @@ process_FT_syncrude.new_exchange(
 process_FT_syncrude['reference product'] = 'syncrude'
 process_FT_syncrude.save()
 
-# --------------- Hydrockracking and Destillation ------------
+# --------------- Hydrocracking and Destillation ------------
 heat_int = project_af.get(name="heat production, combined heat and power production")
 H2_int = project_af.get(name="h2 production, fischer tropsch conversion")
 syncrude_int = project_af.get(name="syncrude production, fischer tropsch conversion")
 
 process_HandD_h20 = project_af.new_activity(
-    code="h2o production, hydrockracking and destillation",
-    name="h2o production, hydrockracking and destillation",
+    code="h2o production, hydrocracking and destillation",
+    name="h2o production, hydrocracking and destillation",
     unit='liter',
 )
 
@@ -1733,6 +1734,14 @@ process_HandD_h20.new_exchange(
     input=syncrude_int,
 ).save()
 
+process_HandD_h20.new_exchange(
+    type="technosphere",
+    name=input_petroleum_refinery["name"],
+    unit=input_petroleum_refinery["unit"],
+    amount=8.347E-11,  # unit/ L (Fuel)
+    input=input_petroleum_refinery,
+).save()
+
 # Production
 process_HandD_h20.new_exchange(
     type="production",
@@ -1746,8 +1755,8 @@ process_HandD_h20['reference product'] = 'H20'
 process_HandD_h20.save()
 
 process_HandD_naphta = project_af.new_activity(
-    code="naphta production, hydrockracking and destillation",
-    name="naphta production, hydrockracking and destillation",
+    code="naphta production, hydrocracking and destillation",
+    name="naphta production, hydrocracking and destillation",
     unit='liter',
 )
 
@@ -1785,6 +1794,14 @@ process_HandD_naphta.new_exchange(
 ).save()
 
 process_HandD_naphta.new_exchange(
+    type="technosphere",
+    name=input_petroleum_refinery["name"],
+    unit=input_petroleum_refinery["unit"],
+    amount=2.428E-11,  # unit/ L (Fuel)
+    input=input_petroleum_refinery,
+).save()
+
+process_HandD_naphta.new_exchange(
     type="production",
     name="naphta",
     unit='L',
@@ -1796,8 +1813,8 @@ process_HandD_naphta['reference product'] = 'naphta'
 process_HandD_naphta.save()
 
 process_HandD_c1c4 = project_af.new_activity(
-    code="c1c4 production, hydrockracking and destillation",
-    name="c1c4 production, hydrockracking and destillation",
+    code="c1c4 production, hydrocracking and destillation",
+    name="c1c4 production, hydrocracking and destillation",
     unit='kilogramm',
 )
 
@@ -1835,6 +1852,14 @@ process_HandD_c1c4.new_exchange(
 ).save()
 
 process_HandD_c1c4.new_exchange(
+    type="technosphere",
+    name=input_petroleum_refinery["name"],
+    unit=input_petroleum_refinery["unit"],
+    amount=5.980E-12,  # unit/ L (Fuel)
+    input=input_petroleum_refinery,
+).save()
+
+process_HandD_c1c4.new_exchange(
     type="production",
     name="C1C4",
     unit='kg',
@@ -1846,8 +1871,8 @@ process_HandD_c1c4['reference product'] = 'C1C4'
 process_HandD_c1c4.save()
 
 process_HandD_jetfuel = project_af.new_activity(
-    code="jet fuel production, hydrockracking and destillation",
-    name="jet fuel production, hydrockracking and destillation",
+    code="jet fuel production, hydrocracking and destillation",
+    name="jet fuel production, hydrocracking and destillation",
     unit='liter',
 )
 
@@ -1885,6 +1910,14 @@ process_HandD_jetfuel.new_exchange(
 ).save()
 
 process_HandD_jetfuel.new_exchange(
+    type="technosphere",
+    name=input_petroleum_refinery["name"],
+    unit=input_petroleum_refinery["unit"],
+    amount=3.189E-11,  # unit/ L (Fuel)
+    input=input_petroleum_refinery,
+).save()
+
+process_HandD_jetfuel.new_exchange(
     type="production",
     name="jet fuel",
     unit='L',
@@ -1901,10 +1934,10 @@ input_CHPU_elect=project_af.get(name="electricity production, combined heat and 
 input_CHPU_heat=project_af.get(name="heat production, combined heat and power production")
 input_FTC_syncrude=project_af.get(name="syncrude production, fischer tropsch conversion")
 input_FTC_H2=project_af.get(name="h2 production, fischer tropsch conversion")
-input_hydro_c1c4=project_af.get(name="c1c4 production, hydrockracking and destillation")
-input_hydro_H2O=project_af.get(name="h2o production, hydrockracking and destillation")
-input_Hydro_naphta=project_af.get(name="naphta production, hydrockracking and destillation")
-input_hydro_jetfuel=project_af.get(name="jet fuel production, hydrockracking and destillation")
+input_hydro_c1c4=project_af.get(name="c1c4 production, hydrocracking and destillation")
+input_hydro_H2O=project_af.get(name="h2o production, hydrocracking and destillation")
+input_hydro_naphta=project_af.get(name="naphta production, hydrocracking and destillation")
+input_hydro_jetfuel=project_af.get(name="jet fuel production, hydrocracking and destillation")
 
 process_full = project_af.new_activity(
     code="jet fuel production, all processes",
@@ -1971,10 +2004,10 @@ process_full.new_exchange(
 
 process_full.new_exchange(
     type="technosphere",
-    name=input_Hydro_naphta["name"],
-    unit=input_Hydro_naphta["unit"],
+    name=input_hydro_naphta["name"],
+    unit=input_hydro_naphta["unit"],
     amount=0.609,  # L/L Fuel 
-    input=input_Hydro_naphta,
+    input=input_hydro_naphta,
 ).save()
 
 process_full.new_exchange(
@@ -2064,10 +2097,10 @@ process_full_bio1.new_exchange(
 
 process_full_bio1.new_exchange(
     type="technosphere",
-    name=input_Hydro_naphta["name"],
-    unit=input_Hydro_naphta["unit"],
+    name=input_hydro_naphta["name"],
+    unit=input_hydro_naphta["unit"],
     amount=0.609,  # L/L Fuel
-    input=input_Hydro_naphta,
+    input=input_hydro_naphta,
 ).save()
 
 process_full_bio1.new_exchange(
@@ -2156,10 +2189,10 @@ process_full_bio2.new_exchange(
 
 process_full_bio2.new_exchange(
     type="technosphere",
-    name=input_Hydro_naphta["name"],
-    unit=input_Hydro_naphta["unit"],
+    name=input_hydro_naphta["name"],
+    unit=input_hydro_naphta["unit"],
     amount=0.609,  # L/L Fuel
-    input=input_Hydro_naphta,
+    input=input_hydro_naphta,
 ).save()
 
 process_full_bio2.new_exchange(
@@ -2248,10 +2281,10 @@ process_full_bio3.new_exchange(
 
 process_full_bio3.new_exchange(
     type="technosphere",
-    name=input_Hydro_naphta["name"],
-    unit=input_Hydro_naphta["unit"],
+    name=input_hydro_naphta["name"],
+    unit=input_hydro_naphta["unit"],
     amount=0.609,  # L/L Fuel
-    input=input_Hydro_naphta,
+    input=input_hydro_naphta,
 ).save()
 
 process_full_bio3.new_exchange(
@@ -2340,10 +2373,10 @@ process_full_co2.new_exchange(
 
 process_full_co2.new_exchange(
     type="technosphere",
-    name=input_Hydro_naphta["name"],
-    unit=input_Hydro_naphta["unit"],
+    name=input_hydro_naphta["name"],
+    unit=input_hydro_naphta["unit"],
     amount=0.609,  # L/L Fuel
-    input=input_Hydro_naphta,
+    input=input_hydro_naphta,
 ).save()
 
 process_full_co2.new_exchange(
@@ -2432,10 +2465,10 @@ process_full_fossil.new_exchange(
 
 process_full_fossil.new_exchange(
     type="technosphere",
-    name=input_Hydro_naphta["name"],
-    unit=input_Hydro_naphta["unit"],
+    name=input_hydro_naphta["name"],
+    unit=input_hydro_naphta["unit"],
     amount=0.609,  # L/L Fuel
-    input=input_Hydro_naphta,
+    input=input_hydro_naphta,
 ).save()
 
 process_full_fossil.new_exchange(
