@@ -13,7 +13,8 @@ bd.Database('project_af').metadata['depends'] = ['ecoinvent-3.10-biosphere',
                                                  'ei310_IMAGE_SSP2_RCP26_2050']
 
 # Check if processes already exist, if they exist delete
-process_name = ['syngas production scenarios', 'syngas production fossil', 'syngas production bio',
+process_name = ['syngas production scenarios', 'syngas production fossil',
+                'syngas production fossil 2', 'syngas production bio',
                 'syngas production CO2', 'h2 production, fischer tropsch conversion',
                 'syncrude production, fischer tropsch conversion',
                 'h2o production, hydrocracking and destillation',
@@ -22,9 +23,9 @@ process_name = ['syngas production scenarios', 'syngas production fossil', 'syng
                 'jet fuel production, hydrocracking and destillation',
                 'heat production, combined heat and power production',
                 'electricity production, combined heat and power production',
-                'syngas production bio, miscanthus',
-                'jet fuel production, all processes', "jet fuel production fossil",
-                'jet fuel production bio 1',  'jet fuel production bio 2',
+                'syngas production bio, miscanthus','jet fuel production, all processes', 
+                'jet fuel production fossil', 'jet fuel production fossil 2', 
+                'jet fuel production bio 1', 'jet fuel production bio 2',
                 'jet fuel production bio 3', 'jet fuel production co2', 
                 'direct air capture facility production', 'combined heat and power unit',
                 'cell production', 'stack production', 'HT co-electrolysis balance of plant']
@@ -45,6 +46,7 @@ delete_exprocesses()
 # Inputs
 input_co = eidb.get(name="market for carbon monoxide", location="RER", unit="kilogram")
 input_h2 = eidb.get(name="hydrogen production, steam methane reforming", location="RER", unit="kilogram")
+input_h2_coal = [act for act in eidb if 'hydrogen production, coal gasification' in act["name"] and "RoW" in act["location"]][0]
 input_water = eidb.get(name="market for tap water", location="Europe without Switzerland")
 input_oxygen = eidb.get(name="market for oxygen, liquid", location="RER")
 input_miscanthus = eidb.get(name="market for miscanthus, chopped", location="GLO")
@@ -858,7 +860,43 @@ process_syngas_fossil.new_exchange(
 process_syngas_fossil['reference product'] = 'syngas fossil'
 process_syngas_fossil.save()
 
+process_syngas_fossil_2 = project_af.new_activity(
+    code="syngas production fossil 2",
+    name="syngas production fossil 2",
+    unit='kilogramm',
+)
+
+# Technosphere
+process_syngas_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_co["name"],
+    unit=input_co["unit"],
+    amount=0.95775295,  #kg/ kg(syngas)
+    input=input_co,
+).save()
+
+process_syngas_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_h2_coal["name"],
+    unit=input_h2_coal["unit"],
+    amount=0.00045589,  # kg/kg(syngas)
+    input=input_h2,
+).save()
+
+# Production
+process_syngas_fossil_2.new_exchange(
+    type="production",
+    name="syngas fossil",
+    unit='kilogramm',
+    amount=1,
+    input=process_syngas_fossil_2,
+).save()
+
+process_syngas_fossil_2['reference product'] = 'syngas fossil' # To-Do: check if this is correct
+process_syngas_fossil_2.save()
+
 # --------- Bio syngas production ------------
+# To-Do: consider plant/unit production, otherwise not comparable
 process_syngas_bio = project_af.new_activity(
     code="syngas production bio, miscanthus",
     name="syngas production bio, miscanthus",
@@ -1020,6 +1058,7 @@ process_syngas_CO2.save()
 
 # --------- Syngas scenarios ------------
 syngas_fossil = project_af.get(name="syngas production fossil")
+syngas_fossil_2 = project_af.get(name="syngas production fossil 2")
 syngas_bio_1 = eidb.get(name="synthetic gas production, from wood, at fixed bed gasifier", location="RoW")
 syngas_bio_2 = eidb.get(name="synthetic gas production, from wood, at fluidized bed gasifier", location="RoW")
 syngas_bio_3 = project_af.get(name="syngas production bio, miscanthus")
@@ -1034,6 +1073,7 @@ process_syngas_scenarios = project_af.new_activity(
 # Define a named parameter for syngas input
 process_syngas_scenarios["parameters"] = {
     "status_fossil_1": int(input("Enter a number between 0 and 1 for status fossil: ")),
+    "status_fossil_2": int(input("Enter a number between 0 and 1 for status fossil 2: ")),
     "status_bio_1": int(input("Enter a number between 0 and 1 for status bio 1: ")),
     "status_bio_2": int(input("Enter a number between 0 and 1 for status bio 2: ")),
     "status_bio_3": int(input("Enter a number between 0 and 1 for status bio 3: ")),
@@ -1041,6 +1081,7 @@ process_syngas_scenarios["parameters"] = {
 }
 
 status_fossil_1 = process_syngas_scenarios["parameters"]["status_fossil_1"]
+status_fossil_2 = process_syngas_scenarios["parameters"]["status_fossil_2"]
 status_bio_1 = process_syngas_scenarios["parameters"]["status_bio_1"]
 status_bio_2 = process_syngas_scenarios["parameters"]["status_bio_2"]
 status_bio_3 = process_syngas_scenarios["parameters"]["status_bio_3"]
@@ -1053,6 +1094,14 @@ process_syngas_scenarios.new_exchange(
     unit=syngas_fossil["unit"],
     amount=12.038517 * status_fossil_1,  # kg/L(Fuel)
     input=syngas_fossil,
+).save()
+
+process_syngas_scenarios.new_exchange(
+    type="technosphere",
+    name=syngas_fossil_2["name"],
+    unit=syngas_fossil_2["unit"],
+    amount=12.038517 * status_fossil_2,  # kg/L(Fuel)
+    input=syngas_fossil_2,
 ).save()
 
 process_syngas_scenarios.new_exchange(
@@ -2490,3 +2539,95 @@ process_full_fossil.new_exchange(
 
 process_full_fossil['reference product'] = 'jet fuel, fossil'
 process_full_fossil.save()
+
+# Fossil
+process_full_fossil_2 = project_af.new_activity(
+    code="jet fuel production fossil 2",
+    name="jet fuel production fossil 2",
+    unit='liter',
+)
+
+# Technosphere
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=syngas_fossil_2["name"],
+    unit=syngas_fossil_2["unit"],
+    amount=4.1109582,  # kg/ L(Fuel)
+    input=syngas_fossil_2,
+).save()
+
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_CHPU_heat["name"],
+    unit=input_CHPU_heat["unit"],
+    amount=0.52777778,  # kWh/ L(Fuel)
+    input=input_CHPU_heat,
+).save()
+
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_CHPU_elect["name"],
+    unit=input_CHPU_elect["unit"],
+    amount=0.611111,  # kg/L (Fuel)
+    input=input_CHPU_elect,
+).save()
+
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_FTC_syncrude["name"],
+    unit=input_FTC_syncrude["unit"],
+    amount=18.4932478,  # kg/L Fuel
+    input=input_FTC_syncrude,
+).save()
+
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_FTC_H2["name"],
+    unit=input_FTC_H2["unit"],
+    amount=0.0268128,  # kg/L Fuel
+    input=input_FTC_H2,
+).save()
+
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_hydro_c1c4["name"],
+    unit=input_hydro_c1c4["unit"],
+    amount=0.15,  # kg/L Fuel
+    input=input_hydro_c1c4,
+).save()
+
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_hydro_H2O["name"],
+    unit=input_hydro_H2O["unit"],
+    amount=2.0937,  # kg/L Fuel
+    input=input_hydro_H2O,
+).save()
+
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_hydro_naphta["name"],
+    unit=input_hydro_naphta["unit"],
+    amount=0.609,  # L/L Fuel
+    input=input_hydro_naphta,
+).save()
+
+process_full_fossil_2.new_exchange(
+    type="technosphere",
+    name=input_hydro_jetfuel["name"],
+    unit=input_hydro_jetfuel["unit"],
+    amount=1,  # L/L
+    input=input_hydro_jetfuel,
+).save()
+
+# Production
+process_full_fossil_2.new_exchange(
+    type="production",
+    name=process_full_fossil_2["name"],
+    unit=process_full_fossil_2["unit"],
+    amount=1,  # L = 0,775 kg
+    input=process_full_fossil_2,
+).save()
+
+process_full_fossil_2['reference product'] = 'jet fuel, fossil 2'
+process_full_fossil_2.save()

@@ -10,5 +10,5 @@ bsdb = bd.Database("ecoinvent-3.10-biosphere")
 project_af = bd.Database("project_af")
 
 
-input_plant = eidb.get(name="synthetic fuel production, from coal, high temperature Fisher-Tropsch operations", location="ZA")
+input_plant = [act for act in eidb if 'hydrogen production, coal gasification' in act["name"] and "RoW" in act["location"]][0]
 
