@@ -1,5 +1,4 @@
 import bw2data as bd  # for everything related to the database
-import bw2data as bd
 import bw2calc as bc
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -129,6 +128,10 @@ df_scores = pd.DataFrame(records)
 df_pivot = df_scores.pivot(index='Functional Unit', columns='Impact Category', values='Score')
 df_pivot = df_pivot.sort_index(axis=1)
 print(df_pivot)
+
+# Exporting data to Excel
+output_path = r'C:\Users\matal\anaconda3\LCAs_project\lca_project_fisher\data\Electricity_comparison.xlsx'
+df_pivot.to_excel(output_path, sheet_name='Electricity Comparison')
 
 # Plotting
 df_pivot.T.plot(kind='barh', figsize=(12, 8))

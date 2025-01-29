@@ -1,0 +1,251 @@
+Impact Category,Score,Process
+Acidification (Ae) ,0.034121231,"Electricity Production, Hard Coal"
+Acidification (Ae) ,0.033351992,"Electricity Production, Lignite"
+Acidification (Ae) ,0.031625691,"Heat And Power Co-Generation, Hard Coal"
+Acidification (Ae) ,0.022002148,"Transport, Freight, Sea, Tanker For Petroleum"
+Acidification (Ae) ,0.02186347,"Electricity Production, Lignite"
+Acidification (Ae) ,0.021759631,"Heavy Fuel Oil Production, Petroleum Refinery Operation"
+Acidification (Ae) ,0.018976999,"Heat And Power Co-Generation, Lignite"
+Acidification (Ae) ,0.009945131,"Treatment Of Waste Gypsum, Sanitary Landfill"
+Acidification (Ae) ,0.009436312,"Transport, Freight, Sea, Bulk Carrier For Dry Goods"
+Acidification (Ae) ,0.00864996,"Smelting Of Copper Concentrate, Sulfide Ore"
+Climate Change (Gwp100),13.40636969,Natural Gas Venting From Petroleum/Natural Gas Production
+Climate Change (Gwp100),6.610666152,"Electricity Production, Lignite"
+Climate Change (Gwp100),4.206268673,"Heat And Power Co-Generation, Hard Coal"
+Climate Change (Gwp100),3.552039803,"Sweet Gas, Burned In Gas Turbine"
+Climate Change (Gwp100),2.942847136,"Heavy Fuel Oil Production, Petroleum Refinery Operation"
+Climate Change (Gwp100),2.817793925,"Electricity Production, Natural Gas, Conventional Power Plant"
+Climate Change (Gwp100),2.789596089,"Electricity Production, Hard Coal"
+Climate Change (Gwp100),2.559528579,"Heat And Power Co-Generation, Lignite"
+Climate Change (Gwp100),2.47098371,"Treatment Of Waste Natural Gas, Sweet, Burned In Production Flare"
+Climate Change (Gwp100),1.958375424,"Electricity Production, Lignite"
+Climate Change: Biogenic (Gwp100),0.082518044,Anaerobic Digestion Of Manure
+Climate Change: Biogenic (Gwp100),0.010520478,"Heat And Power Co-Generation, Biogas, Gas Engine"
+Climate Change: Biogenic (Gwp100),0.005484505,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Biogenic (Gwp100),0.005040503,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Biogenic (Gwp100),0.004588572,"Treatment Of Municipal Solid Waste, Unsanitary Landfill, Wet Infiltration Class (500mm)"
+Climate Change: Biogenic (Gwp100),0.003848828,"Heat And Power Co-Generation, Biogas, Gas Engine"
+Climate Change: Biogenic (Gwp100),0.003817648,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Biogenic (Gwp100),0.003659787,"Electricity Production, Hydro, Reservoir, Alpine Region"
+Climate Change: Biogenic (Gwp100),0.002783831,"Treatment Of Municipal Solid Waste, Open Dump, Wet Infiltration Class (500mm)"
+Climate Change: Biogenic (Gwp100),0.002476802,"Electricity Production, Hydro, Pumped Storage"
+Climate Change: Fossil (Gwp100),13.40636969,Natural Gas Venting From Petroleum/Natural Gas Production
+Climate Change: Fossil (Gwp100),6.610666152,"Electricity Production, Lignite"
+Climate Change: Fossil (Gwp100),4.206268673,"Heat And Power Co-Generation, Hard Coal"
+Climate Change: Fossil (Gwp100),3.552039803,"Sweet Gas, Burned In Gas Turbine"
+Climate Change: Fossil (Gwp100),2.942847136,"Heavy Fuel Oil Production, Petroleum Refinery Operation"
+Climate Change: Fossil (Gwp100),2.817793925,"Electricity Production, Natural Gas, Conventional Power Plant"
+Climate Change: Fossil (Gwp100),2.789596089,"Electricity Production, Hard Coal"
+Climate Change: Fossil (Gwp100),2.559528579,"Heat And Power Co-Generation, Lignite"
+Climate Change: Fossil (Gwp100),2.47098371,"Treatment Of Waste Natural Gas, Sweet, Burned In Production Flare"
+Climate Change: Fossil (Gwp100),1.958375424,"Electricity Production, Lignite"
+Climate Change: Land And Use Change (Gwp100),0.038833639,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Land And Use Change (Gwp100),0.035689838,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Land And Use Change (Gwp100),0.027031275,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Land And Use Change (Gwp100),0.017537269,"Electricity Production, Hydro, Pumped Storage"
+Climate Change: Land And Use Change (Gwp100),0.011380358,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Land And Use Change (Gwp100),0.00964636,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Land And Use Change (Gwp100),0.00939839,"Electricity Production, Hydro, Pumped Storage"
+Climate Change: Land And Use Change (Gwp100),0.007805953,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Climate Change: Land And Use Change (Gwp100),0.004300539,"Electricity Production, Hydro, Pumped Storage"
+Climate Change: Land And Use Change (Gwp100),0.003730654,"Electricity Production, Hydro, Pumped Storage"
+Ecotoxicity: Freshwater (Ctue) ,67.07960463,Coke Production
+Ecotoxicity: Freshwater (Ctue) ,65.27224691,Lignite Mine Operation
+Ecotoxicity: Freshwater (Ctue) ,24.66146004,"Treatment Of Water Discharge From Petroleum/Natural Gas Extraction, Onshore"
+Ecotoxicity: Freshwater (Ctue) ,17.84751743,"Wood Preservation, Pressure Vessel, Creosote, Outdoor Use, Ground Contact"
+Ecotoxicity: Freshwater (Ctue) ,10.78220244,"Coke Production, Wet Quenching"
+Ecotoxicity: Freshwater (Ctue) ,9.248734565,"Treatment Of Drilling Waste, Landfarming"
+Ecotoxicity: Freshwater (Ctue) ,8.971009493,Ammonium Sulfate Production
+Ecotoxicity: Freshwater (Ctue) ,8.398948467,Hard Coal Mine Operation And Hard Coal Preparation
+Ecotoxicity: Freshwater (Ctue) ,8.219654544,Hard Coal Mine Operation And Hard Coal Preparation
+Ecotoxicity: Freshwater (Ctue) ,6.136772324,"Treatment Of Sulfidic Tailings, From Copper Mine Operation, Tailings Impoundment"
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",65.27082578,Lignite Mine Operation
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",21.7882063,"Treatment Of Water Discharge From Petroleum/Natural Gas Extraction, Onshore"
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",10.77153643,"Coke Production, Wet Quenching"
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",9.248734565,"Treatment Of Drilling Waste, Landfarming"
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",8.970780679,Ammonium Sulfate Production
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",8.392634901,Hard Coal Mine Operation And Hard Coal Preparation
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",8.211057127,Hard Coal Mine Operation And Hard Coal Preparation
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",7.276956012,Coke Production
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",6.136772324,"Treatment Of Sulfidic Tailings, From Copper Mine Operation, Tailings Impoundment"
+"Ecotoxicity: Freshwater, Inorganics (Ctue) ",5.860428388,"Treatment Of Sulfidic Tailings, From Zinc-Lead Mine Operation, Tailings Impoundment"
+"Ecotoxicity: Freshwater, Organics (Ctue) ",59.80264862,Coke Production
+"Ecotoxicity: Freshwater, Organics (Ctue) ",17.84751743,"Wood Preservation, Pressure Vessel, Creosote, Outdoor Use, Ground Contact"
+"Ecotoxicity: Freshwater, Organics (Ctue) ",5.216310991,"Wood Preservation, Pressure Vessel, Creosote, Outdoor Use, Ground Contact"
+"Ecotoxicity: Freshwater, Organics (Ctue) ",3.705219865,Coke Production
+"Ecotoxicity: Freshwater, Organics (Ctue) ",2.873253743,"Treatment Of Water Discharge From Petroleum/Natural Gas Extraction, Onshore"
+"Ecotoxicity: Freshwater, Organics (Ctue) ",1.875737407,Soybean Production
+"Ecotoxicity: Freshwater, Organics (Ctue) ",1.751237544,Natural Gas Venting From Petroleum/Natural Gas Production
+"Ecotoxicity: Freshwater, Organics (Ctue) ",1.286907879,Coke Production
+"Ecotoxicity: Freshwater, Organics (Ctue) ",0.501672675,Coke Production
+"Ecotoxicity: Freshwater, Organics (Ctue) ",0.330285657,"Bisphenol A Production, Powder"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,288.5185842,"Uranium Production, In Yellowcake, In-Situ Leaching"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,288.3617771,"Petroleum And Gas Production, Onshore"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,182.0601285,Lignite Mine Operation
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,180.4894015,"Petroleum And Gas Production, Offshore"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,168.6686558,"Uranium Mine Operation, Underground"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,159.2220762,"Uranium Mine Operation, Underground"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,121.3539207,"Petroleum And Gas Production, Onshore"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,120.4720492,"Petroleum And Gas Production, Onshore"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,100.9108943,"Petroleum And Gas Production, Onshore"
+Energy Resources: Non-Renewable (Adp): Fossil Fuels ,91.56981045,"Petroleum And Gas Production, Onshore"
+Eutrophication: Freshwater (P),0.004899723,"Treatment Of Spoil From Lignite Mining, In Surface Landfill"
+Eutrophication: Freshwater (P),0.001136184,"Treatment Of Spoil From Hard Coal Mining, In Surface Landfill"
+Eutrophication: Freshwater (P),5.44E-05,Market For Wastewater From Vegetable Oil Refinery
+Eutrophication: Freshwater (P),4.03E-05,"Market For Wastewater, Average"
+Eutrophication: Freshwater (P),2.57E-05,"Treatment Of Sulfidic Tailings, From Copper Mine Operation, Tailings Impoundment"
+Eutrophication: Freshwater (P),1.92E-05,"Treatment Of Sulfidic Tailings, From Copper Mine Operation, Tailings Impoundment"
+Eutrophication: Freshwater (P),1.65E-05,"Treatment Of Sulfidic Tailings, From Copper Mine Operation, Tailings Impoundment"
+Eutrophication: Freshwater (P),1.54E-05,"Treatment Of Sulfidic Tailings, From Copper Mine Operation, Tailings Impoundment"
+Eutrophication: Freshwater (P),1.22E-05,"Treatment Of Wastewater From Vegetable Oil Refinery, Wastewater Treatment"
+Eutrophication: Freshwater (P),1.08E-05,"Treatment Of Sulfidic Tailings, From Gold Mine Operation, Tailings Impoundment"
+Eutrophication: Marine (N),0.005248439,"Transport, Freight, Sea, Tanker For Petroleum"
+Eutrophication: Marine (N),0.004553943,"Electricity Production, Hard Coal"
+Eutrophication: Marine (N),0.003254443,"Diesel, Burned In Building Machine"
+Eutrophication: Marine (N),0.003038322,"Heat And Power Co-Generation, Hard Coal"
+Eutrophication: Marine (N),0.002163824,"Transport, Freight, Sea, Bulk Carrier For Dry Goods"
+Eutrophication: Marine (N),0.001756192,Blasting
+Eutrophication: Marine (N),0.001690924,"Electricity Production, Lignite"
+Eutrophication: Marine (N),0.001344378,"Heat And Power Co-Generation, Lignite"
+Eutrophication: Marine (N),0.001324071,"Electricity Production, Lignite"
+Eutrophication: Marine (N),0.001223716,"Heavy Fuel Oil Production, Petroleum Refinery Operation"
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.058510675,"Transport, Freight, Sea, Tanker For Petroleum"
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.049870947,"Electricity Production, Hard Coal"
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.035687182,"Diesel, Burned In Building Machine"
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.033273142,"Heat And Power Co-Generation, Hard Coal"
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.028855507,Blasting
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.024147211,"Transport, Freight, Sea, Bulk Carrier For Dry Goods"
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.01851757,"Electricity Production, Lignite"
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.014722491,"Heat And Power Co-Generation, Lignite"
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.014538178,Blasting
+"Eutrophication: Terrestrial , Accumulated Exceedance (Ae) )",0.014500113,"Electricity Production, Lignite"
+Human Toxicity: Carcinogenic (Ctuh),2.63E-07,Coke Production
+Human Toxicity: Carcinogenic (Ctuh),1.63E-08,Coke Production
+Human Toxicity: Carcinogenic (Ctuh),5.67E-09,Coke Production
+Human Toxicity: Carcinogenic (Ctuh),2.21E-09,Coke Production
+Human Toxicity: Carcinogenic (Ctuh),2.01E-09,"Treatment Of Lignite Ash, Opencast Refill"
+Human Toxicity: Carcinogenic (Ctuh),1.27E-09,"Chlor-Alkali Electrolysis, Membrane Cell"
+Human Toxicity: Carcinogenic (Ctuh),1.23E-09,"Smelting Of Copper Concentrate, Sulfide Ore"
+Human Toxicity: Carcinogenic (Ctuh),1.22E-09,"Wood Preservation, Pressure Vessel, Creosote, Outdoor Use, Ground Contact"
+Human Toxicity: Carcinogenic (Ctuh),1.21E-09,"Smelting Of Copper Concentrate, Sulfide Ore"
+Human Toxicity: Carcinogenic (Ctuh),1.15E-09,"Hard Coal, Import From ZA"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",2.01E-09,"Treatment Of Lignite Ash, Opencast Refill"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",1.23E-09,"Smelting Of Copper Concentrate, Sulfide Ore"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",1.21E-09,"Smelting Of Copper Concentrate, Sulfide Ore"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",1.15E-09,"Hard Coal, Import From ZA"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",6.52E-10,"Treatment Of Electric Arc Furnace Slag, Residual Material Landfill"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",5.10E-10,"Heavy Fuel Oil Production, Petroleum Refinery Operation"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",3.67E-10,"Heat And Power Co-Generation, Lignite"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",3.00E-10,"Sodium Chlorate Production, Powder"
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",2.93E-10,Zinc Mine Operation
+"Human Toxicity: Carcinogenic, Inorganics (Ctuh)",2.41E-10,"Smelting Of Copper Concentrate, Sulfide Ore"
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",2.63E-07,Coke Production
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",1.63E-08,Coke Production
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",5.67E-09,Coke Production
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",2.21E-09,Coke Production
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",1.27E-09,"Chlor-Alkali Electrolysis, Membrane Cell"
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",1.22E-09,"Wood Preservation, Pressure Vessel, Creosote, Outdoor Use, Ground Contact"
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",1.09E-09,Coke Production
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",8.49E-10,"Chlor-Alkali Electrolysis, Membrane Cell"
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",8.31E-10,"Coke Production, Wet Quenching"
+"Human Toxicity: Carcinogenic, Organics (Ctuh)",7.16E-10,"Chlor-Alkali Electrolysis, Average Production"
+Human Toxicity: Non-Carcinogenic (Ctuh),1.23E-07,"Smelting Of Copper Concentrate, Sulfide Ore"
+Human Toxicity: Non-Carcinogenic (Ctuh),1.21E-07,"Smelting Of Copper Concentrate, Sulfide Ore"
+Human Toxicity: Non-Carcinogenic (Ctuh),8.51E-08,"Hard Coal, Import From ZA"
+Human Toxicity: Non-Carcinogenic (Ctuh),6.32E-08,"Treatment Of Lignite Ash, Opencast Refill"
+Human Toxicity: Non-Carcinogenic (Ctuh),4.15E-08,"Heat And Power Co-Generation, Lignite"
+Human Toxicity: Non-Carcinogenic (Ctuh),2.62E-08,"Treatment Of Waste Natural Gas, Sweet, Burned In Production Flare"
+Human Toxicity: Non-Carcinogenic (Ctuh),2.56E-08,Natural Gas Venting From Petroleum/Natural Gas Production
+Human Toxicity: Non-Carcinogenic (Ctuh),2.52E-08,"Heat And Power Co-Generation, Hard Coal"
+Human Toxicity: Non-Carcinogenic (Ctuh),2.42E-08,"Smelting Of Copper Concentrate, Sulfide Ore"
+Human Toxicity: Non-Carcinogenic (Ctuh),1.92E-08,"Sweet Gas, Burned In Gas Turbine"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",1.23E-07,"Smelting Of Copper Concentrate, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",1.21E-07,"Smelting Of Copper Concentrate, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",8.51E-08,"Hard Coal, Import From ZA"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",6.32E-08,"Treatment Of Lignite Ash, Opencast Refill"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",4.15E-08,"Heat And Power Co-Generation, Lignite"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",2.62E-08,"Treatment Of Waste Natural Gas, Sweet, Burned In Production Flare"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",2.52E-08,"Heat And Power Co-Generation, Hard Coal"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",2.42E-08,"Smelting Of Copper Concentrate, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",1.92E-08,"Sweet Gas, Burned In Gas Turbine"
+"Human Toxicity: Non-Carcinogenic, Inorganics (Ctuh)",1.84E-08,"Electricity Production, Lignite"
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",2.41E-08,Natural Gas Venting From Petroleum/Natural Gas Production
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",6.08E-09,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",5.78E-09,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",1.82E-09,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",1.56E-09,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",1.47E-09,Molybdenite Mine Operation
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",1.23E-09,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",1.22E-09,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",9.29E-10,Hard Coal Mine Operation And Hard Coal Preparation
+"Human Toxicity: Non-Carcinogenic, Organics (Ctuh)",9.03E-10,Hard Coal Mine Operation And Hard Coal Preparation
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",5.108268168,"Treatment Of Spent Nuclear Fuel, Reprocessing"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",2.278358943,"Treatment Of Low Level Radioactive Waste, Plasma Torch Incineration"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",1.339990574,"Electricity Production, Nuclear, Boiling Water Reactor"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",1.067862791,"Electricity Production, Nuclear, Boiling Water Reactor"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",0.446912252,"Electricity Production, Nuclear, Boiling Water Reactor"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",0.397379557,"Electricity Production, Nuclear, Pressure Water Reactor"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",0.360187314,"Electricity Production, Nuclear, Boiling Water Reactor"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",0.329956538,"Uranium Mine Operation, Underground"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",0.311476752,"Uranium Mine Operation, Underground"
+"Ionising Radiation: Human Health , Human Exposure Efficiency Relative To U235",0.238785798,"Electricity Production, Nuclear, Pressure Water Reactor"
+Land Use : Soil Quality Index ,66.92625497,Onshore Petroleum Field Infrastructure Construction
+Land Use : Soil Quality Index ,49.82318535,"Hardwood Forestry, Birch, Sustainable Forest Management"
+Land Use : Soil Quality Index ,37.95241407,"Softwood Forestry, Pine, Sustainable Forest Management"
+Land Use : Soil Quality Index ,36.84648339,"Softwood Forestry, Spruce, Sustainable Forest Management"
+Land Use : Soil Quality Index ,25.68502291,"Hardwood Forestry, Beech, Sustainable Forest Management"
+Land Use : Soil Quality Index ,17.07158842,"Softwood Forestry, Mixed Species, Sustainable Forest Management"
+Land Use : Soil Quality Index ,14.52516785,Road Construction
+Land Use : Soil Quality Index ,10.88681744,"Chemical Factory Construction, Organics"
+Land Use : Soil Quality Index ,10.64061395,"Softwood Forestry, Spruce, Sustainable Forest Management"
+Land Use : Soil Quality Index ,8.817933578,"Softwood Forestry, Pine, Sustainable Forest Management"
+Material Resources: Metals/Minerals (Adp),0.000120771,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+Material Resources: Metals/Minerals (Adp),0.000102396,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+Material Resources: Metals/Minerals (Adp),5.02E-05,"Gold Mine Operation And Gold Production, Unrefined"
+Material Resources: Metals/Minerals (Adp),3.82E-05,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+Material Resources: Metals/Minerals (Adp),3.45E-05,Zinc Mine Operation
+Material Resources: Metals/Minerals (Adp),2.46E-05,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+Material Resources: Metals/Minerals (Adp),2.43E-05,Silver-Gold Mine Operation With Refinery
+Material Resources: Metals/Minerals (Adp),1.91E-05,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+Material Resources: Metals/Minerals (Adp),1.88E-05,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+Material Resources: Metals/Minerals (Adp),1.83E-05,"Copper Mine Operation And Beneficiation, Sulfide Ore"
+Ozone Depletion (Odp),7.60E-07,"Petroleum And Gas Production, Offshore"
+Ozone Depletion (Odp),3.25E-07,"Petroleum And Gas Production, Offshore"
+Ozone Depletion (Odp),2.62E-07,"Petroleum And Gas Production, Offshore"
+Ozone Depletion (Odp),2.56E-07,"Petroleum And Gas Production, Offshore"
+Ozone Depletion (Odp),2.32E-07,"Petroleum And Gas Production, Offshore"
+Ozone Depletion (Odp),1.62E-07,"Petroleum And Gas Production, Offshore"
+Ozone Depletion (Odp),1.25E-07,"Transport, Pipeline, Onshore, Long Distance, Natural Gas"
+Ozone Depletion (Odp),1.18E-07,"Petroleum And Gas Production, Offshore"
+Ozone Depletion (Odp),9.18E-08,"Petroleum And Gas Production, Offshore"
+Ozone Depletion (Odp),9.16E-08,"Petroleum And Gas Production, Offshore"
+Particulate Matter Formation: Impact On Human Health,2.79E-07,"Heavy Fuel Oil Production, Petroleum Refinery Operation"
+Particulate Matter Formation: Impact On Human Health,2.57E-07,"Electricity Production, Hard Coal, At Coal Mine Power Plant"
+Particulate Matter Formation: Impact On Human Health,2.00E-07,"Diesel, Burned In Building Machine"
+Particulate Matter Formation: Impact On Human Health,7.34E-08,"Heat Production, At Hard Coal Industrial Furnace 1-10MW"
+Particulate Matter Formation: Impact On Human Health,4.02E-08,Blasting
+Particulate Matter Formation: Impact On Human Health,3.77E-08,"Heat And Power Co-Generation, Oil"
+Particulate Matter Formation: Impact On Human Health,3.46E-08,"Electricity Production, Lignite"
+Particulate Matter Formation: Impact On Human Health,3.29E-08,"Heat And Power Co-Generation, Wood Chips, 6667 Kw, State-Of-The-Art 2014"
+Particulate Matter Formation: Impact On Human Health,2.63E-08,Iron Sinter Production
+Particulate Matter Formation: Impact On Human Health,2.54E-08,"Electricity Production, Oil"
+Photochemical Oxidant Formation: Human Health,0.212778009,Natural Gas Venting From Petroleum/Natural Gas Production
+Photochemical Oxidant Formation: Human Health,0.014725554,"Transport, Freight, Sea, Tanker For Petroleum"
+Photochemical Oxidant Formation: Human Health,0.013329182,"Electricity Production, Hard Coal"
+Photochemical Oxidant Formation: Human Health,0.011483532,"Heavy Fuel Oil Production, Petroleum Refinery Operation"
+Photochemical Oxidant Formation: Human Health,0.009462361,"Diesel, Burned In Building Machine"
+Photochemical Oxidant Formation: Human Health,0.009445978,"Heat And Power Co-Generation, Hard Coal"
+Photochemical Oxidant Formation: Human Health,0.006291739,Market For Petroleum
+Photochemical Oxidant Formation: Human Health,0.006099396,"Transport, Freight, Sea, Bulk Carrier For Dry Goods"
+Photochemical Oxidant Formation: Human Health,0.005336682,"Electricity Production, Lignite"
+Photochemical Oxidant Formation: Human Health,0.005163222,Blasting
+Water Use: User Deprivation Potential,48.62559326,"Industrial Gases Production, Cryogenic Air Separation"
+Water Use: User Deprivation Potential,12.15156954,"Electricity Production, Hydro, Reservoir, Alpine Region"
+Water Use: User Deprivation Potential,2.99279337,Carbon Monoxide Production
+Water Use: User Deprivation Potential,2.83410047,"Electricity Production, Nuclear, Pressure Water Reactor"
+Water Use: User Deprivation Potential,2.542977037,"Electricity Production, Hydro, Reservoir, Alpine Region"
+Water Use: User Deprivation Potential,1.470960579,"Heat And Power Co-Generation, Lignite"
+Water Use: User Deprivation Potential,1.24971737,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Water Use: User Deprivation Potential,1.150709486,"Electricity Production, Nuclear, Pressure Water Reactor, Heavy Water Moderated"
+Water Use: User Deprivation Potential,1.148545714,"Electricity Production, Hydro, Reservoir, Non-Alpine Region"
+Water Use: User Deprivation Potential,1.005430684,"Electricity Production, Hydro, Reservoir, Alpine Region"

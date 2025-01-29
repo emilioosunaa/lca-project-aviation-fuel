@@ -58,6 +58,21 @@ df_pivot = df_scores.pivot(index='Functional Unit', columns='Impact Category', v
 df_pivot = df_pivot.sort_index(axis=1)
 print(df_pivot)
 
+# Export the results to an Excel file with multiple sheets
+with pd.ExcelWriter("data//MultiLCA_all_categoiries.xlsx") as writer:
+    # Write all results grouped by Impact Category in "All Results" sheet
+    all_results = []
+    for impact_category in df_scores['Impact Category'].unique():
+        df_category = df_scores[df_scores['Impact Category'] == impact_category]
+        all_results.append(pd.concat([pd.DataFrame({"Impact Category": [impact_category]}), df_category]))
+    final_results = pd.concat(all_results, axis=0)
+    final_results.to_excel(writer, sheet_name="All Results", index=False)
+
+    # Write each functional unit to its own sheet
+    for functional_unit in df_scores['Functional Unit'].unique():
+        df_subset = df_scores[df_scores['Functional Unit'] == functional_unit]
+        df_subset.to_excel(writer, sheet_name=functional_unit, index=False)
+
 # Plotting
 df_pivot.T.plot(kind='barh', figsize=(12, 8))
 plt.xlabel('Impact Score')
