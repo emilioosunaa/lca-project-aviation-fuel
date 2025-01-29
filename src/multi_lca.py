@@ -2,6 +2,7 @@ import bw2data as bd
 import bw2calc as bc
 import pandas as pd
 import matplotlib.pyplot as plt
+import re
 
 # Import databases
 bd.projects.set_current("LCA_EPE")
@@ -48,11 +49,13 @@ scores = mlca.scores
 records = []
 for key, value in mlca.scores.items():
     impact_hierarchy, functional_unit = key
+    clean_impact_category = re.sub(r"no LT", "", impact_hierarchy[1]).strip().title()
     records.append({
         'Functional Unit': functional_unit,
-        'Impact Category': impact_hierarchy[1], # Only the name of the impact category
+        'Impact Category': clean_impact_category,  # Remove "no LT"
         'Score': value
     })
+
 df_scores = pd.DataFrame(records)
 df_pivot = df_scores.pivot(index='Functional Unit', columns='Impact Category', values='Score')
 df_pivot = df_pivot.sort_index(axis=1)
