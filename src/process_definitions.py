@@ -1,11 +1,11 @@
-import bw2data as bd  # for everything related to the database
+import bw2data as bd
 
 # Lists all projects and then sets current project as LCA_EPE
 bd.projects.set_current("LCA_EPE")
 eidb = bd.Database("ecoinvent-3.10-cutoff")
 bsdb = bd.Database("ecoinvent-3.10-biosphere")
 project_af = bd.Database('project_af')
-data = {}  # we start with no data, so data is empty
+data = {}
 project_af.write(data)
 bd.Database('project_af').metadata['depends'] = ['ecoinvent-3.10-biosphere',
                                                  'ecoinvent-3.10-cutoff',
@@ -14,7 +14,7 @@ bd.Database('project_af').metadata['depends'] = ['ecoinvent-3.10-biosphere',
 
 # Check if processes already exist, if they exist delete
 process_name = ['syngas production scenarios', 'syngas production fossil',
-                'syngas production fossil 2', 'syngas production bio',
+                'syngas production fossil 2',
                 'syngas production CO2', 'h2 production, fischer tropsch conversion',
                 'syncrude production, fischer tropsch conversion',
                 'h2o production, hydrocracking and destillation',
@@ -125,6 +125,7 @@ emission_benzoapyrene = bsdb.get(name="Benzo(a)pyrene", categories=("air",))
 emission_berylliumII = bsdb.get(name="Beryllium II", categories=("air",))
 emission_butane = bsdb.get(name="Butane", categories=("air",))
 emission_cadmiumII = bsdb.get(name="Cadmium II", categories=("air",))
+emission_carbondioxide = bsdb.get(name='Carbon dioxide, in air')
 emission_carbondioxidefossil = bsdb.get(name="Carbon dioxide, fossil", categories=("air",))
 emission_carbonmonoxidefossil = bsdb.get(name="Carbon monoxide, fossil", categories=("air",))
 emission_chromiumIII = bsdb.get(name="Chromium III", categories=("air",))
@@ -828,7 +829,7 @@ process_bop.save()
 process_syngas_fossil = project_af.new_activity(
     code="syngas production fossil",
     name="syngas production fossil",
-    unit='kilogramm',
+    unit='kilogram',
 )
 
 # Technosphere
@@ -848,11 +849,20 @@ process_syngas_fossil.new_exchange(
     input=input_h2,
 ).save()
 
+# Biosphere
+process_syngas_fossil.new_exchange(
+    type="biosphere",
+    name=emission_carbonmonoxidefossil["name"],
+    unit=emission_carbonmonoxidefossil["unit"],
+    amount=-1.87E-08,  # kg/kg(syngas)
+    input=emission_carbonmonoxidefossil,
+).save()
+
 # Production
 process_syngas_fossil.new_exchange(
     type="production",
     name="syngas fossil",
-    unit='kilogramm',
+    unit='kilogram',
     amount=1,
     input=process_syngas_fossil,
 ).save()
@@ -863,7 +873,7 @@ process_syngas_fossil.save()
 process_syngas_fossil_2 = project_af.new_activity(
     code="syngas production fossil 2",
     name="syngas production fossil 2",
-    unit='kilogramm',
+    unit='kilogram',
 )
 
 # Technosphere
@@ -880,19 +890,28 @@ process_syngas_fossil_2.new_exchange(
     name=input_h2_coal["name"],
     unit=input_h2_coal["unit"],
     amount=0.00045589,  # kg/kg(syngas)
-    input=input_h2,
+    input=input_h2_coal,
 ).save()
+
+# Biosphere
+# process_syngas_fossil_2.new_exchange(
+#     type="biosphere",
+#     name=emission_carbonmonoxidefossil["name"],
+#     unit=emission_carbonmonoxidefossil["unit"],
+#     amount=-1.87E-08,  # kg/kg(syngas)
+#     input=emission_carbonmonoxidefossil,
+# ).save()
 
 # Production
 process_syngas_fossil_2.new_exchange(
     type="production",
     name="syngas fossil",
-    unit='kilogramm',
+    unit='kilogram',
     amount=1,
     input=process_syngas_fossil_2,
 ).save()
 
-process_syngas_fossil_2['reference product'] = 'syngas fossil' # To-Do: check if this is correct
+process_syngas_fossil_2['reference product'] = 'syngas fossil 2' # To-Do: check if this is correct
 process_syngas_fossil_2.save()
 
 # --------- Bio syngas production ------------
@@ -900,7 +919,7 @@ process_syngas_fossil_2.save()
 process_syngas_bio = project_af.new_activity(
     code="syngas production bio, miscanthus",
     name="syngas production bio, miscanthus",
-    unit='kilogramm',
+    unit='kilogram',
 )
 
 # Biosphere
@@ -957,7 +976,7 @@ factor_CO2 = 1.38  # kgCO2/kgSyngas
 process_syngas_CO2 = project_af.new_activity(
     code="syngas production CO2",
     name="syngas production CO2",
-    unit='kilogramm',
+    unit='kilogram',
 )
 
 # Technosphere
@@ -977,7 +996,6 @@ process_syngas_CO2.new_exchange(
     input=input_electricity_medium,
 ).save()
 
-# To-Do: heat
 process_syngas_CO2.new_exchange(
     type="technosphere",
     name=input_heat_CO2["name"],
@@ -1042,7 +1060,14 @@ process_syngas_CO2.new_exchange(type='biosphere',
     input=emission_o2,
     ).save()
 
-# To-Do: CO2 negative emissions because of DAC
+# CO2 negative emissions because of DAC
+process_syngas_CO2.new_exchange(
+    type="biosphere",
+    name=emission_carbondioxide["name"],
+    unit=emission_carbondioxide["unit"],
+    amount=-1.38,  # kg/kg(syngas)
+    input=emission_carbondioxide,
+).save()
 
 # Production
 process_syngas_CO2.new_exchange(
@@ -1067,7 +1092,7 @@ syngas_CO2 = project_af.get(name="syngas production CO2")
 process_syngas_scenarios = project_af.new_activity(
     code="syngas production scenarios",
     name="syngas production scenarios",
-    unit='kilogramm',
+    unit='kilogram',
 )
 
 # Define a named parameter for syngas input
@@ -1140,7 +1165,7 @@ process_syngas_scenarios.new_exchange(
 process_syngas_scenarios.new_exchange(
     type="production",
     name="syngas",
-    unit="kilogramm",
+    unit="kilogram",
     amount=1,
     input=process_syngas_scenarios,
 ).save()
@@ -1475,8 +1500,8 @@ process_CHPUO.save()
 
 # ------------- Combined Heat and Power ---------------------
 # Define the heat-to-electricity ratio (based on CHPU specifications)
-electricity_ratio = 0.61111111  # Example: Electricity share (61.11%)
-heat_ratio = 0.527777778  # Example: Heat share (52.78%)
+electricity_ratio = 0.61111111
+heat_ratio = 0.527777778
 
 # Normalize the ratios to ensure the total equals 1
 total_ratio = electricity_ratio + heat_ratio
@@ -1559,7 +1584,7 @@ syngas_int = project_af.get(name="syngas production scenarios")
 process_FT_h2 = project_af.new_activity(
     code="h2 production, fischer tropsch conversion",
     name="h2 production, fischer tropsch conversion",
-    unit='kilogramm',
+    unit='kilogram',
 )
 
 # Auxillary materials
@@ -1640,7 +1665,7 @@ process_FT_h2.new_exchange(
 process_FT_h2.new_exchange(
     type="production",
     name="H2",
-    unit='kilogramm',
+    unit='kilogram',
     amount=0.0268128, # kg/ L (Fuel)
     input=process_FT_h2,
 ).save()
@@ -1651,7 +1676,7 @@ process_FT_h2.save()
 process_FT_syncrude = project_af.new_activity(
     code="syncrude production, fischer tropsch conversion",
     name="syncrude production, fischer tropsch conversion",
-    unit='kilogramm',
+    unit='kilogram',
 )
 # Auxillary materials
 process_FT_syncrude.new_exchange(
@@ -1721,7 +1746,7 @@ process_FT_syncrude.new_exchange(
 
 process_FT_syncrude.new_exchange(
     type="technosphere",
-    name="syngas production scenarios",
+    name=syngas_int["name"],
     unit=syngas_int["unit"],
     amount=0,  # kg/ L (Fuel)
     input=syngas_int,
@@ -1731,7 +1756,7 @@ process_FT_syncrude.new_exchange(
 process_FT_syncrude.new_exchange(
     type="production",
     name="syncrude",
-    unit='kilogramm',
+    unit='kilogram',
     amount=18.4932478,  # kg/ L (Fuel)
     input=process_FT_syncrude,
 ).save()
@@ -1864,7 +1889,7 @@ process_HandD_naphta.save()
 process_HandD_c1c4 = project_af.new_activity(
     code="c1c4 production, hydrocracking and destillation",
     name="c1c4 production, hydrocracking and destillation",
-    unit='kilogramm',
+    unit='kilogram',
 )
 
 # Technosphere

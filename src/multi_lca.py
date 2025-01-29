@@ -16,14 +16,14 @@ jet_fuel_fossil = project_af.get(name='jet fuel production fossil')
 jet_fuel_fossil_2 = project_af.get(name='jet fuel production fossil 2')
 jet_fuel_bio1 = project_af.get(name='jet fuel production bio 1')
 jet_fuel_bio2 = project_af.get(name='jet fuel production bio 2')
-jet_fuel_bio3 = project_af.get(name='jet fuel production bio 3')
+# jet_fuel_bio3 = project_af.get(name='jet fuel production bio 3')
 jet_fuel_co2 = project_af.get(name='jet fuel production co2')
 functional_units = {
     "jet_fuel_fossil": {jet_fuel_fossil.id: 1},
     "jet_fuel_fossil_2": {jet_fuel_fossil_2.id: 1},
     "jet_fuel_bio1": {jet_fuel_bio1.id: 1},
     "jet_fuel_bio2": {jet_fuel_bio2.id: 1},
-    "jet_fuel_bio3": {jet_fuel_bio3.id: 1},
+#    "jet_fuel_bio3": {jet_fuel_bio3.id: 1},
     "jet_fuel_co2": {jet_fuel_co2.id: 1},
 }
 
