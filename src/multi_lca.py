@@ -62,7 +62,7 @@ df_pivot = df_pivot.sort_index(axis=1)
 print(df_pivot)
 
 # Export the results to an Excel file with multiple sheets
-with pd.ExcelWriter("data//MultiLCA_all_categoiries.xlsx") as writer:
+with pd.ExcelWriter("data//multilca_all_categories.xlsx") as writer:
     # Write all results grouped by Impact Category in "All Results" sheet
     all_results = []
     for impact_category in df_scores['Impact Category'].unique():

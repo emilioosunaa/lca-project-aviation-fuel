@@ -1,0 +1,251 @@
+Category,Score,Process
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.03412122150351717,"electricity production, hard coal"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.03335198313207656,"electricity production, lignite"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.03162568203855804,"heat and power co-generation, hard coal"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.022002133315962645,"transport, freight, sea, tanker for petroleum"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.021863464249214544,"electricity production, lignite"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.02175962635790399,"heavy fuel oil production, petroleum refinery operation"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.01897699339426776,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.0099451200519112,"treatment of waste gypsum, sanitary landfill"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.009436929204132511,"transport, freight, sea, bulk carrier for dry goods"
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.008651355556616535,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",13.406370670201383,natural gas venting from petroleum/natural gas production
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",6.610632697923047,"electricity production, lignite"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",4.206267474035681,"heat and power co-generation, hard coal"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",3.5520413410905736,"sweet gas, burned in gas turbine"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",2.9428465426656985,"heavy fuel oil production, petroleum refinery operation"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",2.8177931423897946,"electricity production, natural gas, conventional power plant"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",2.789595338256611,"electricity production, hard coal"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",2.5595278493742466,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",2.470983567145069,"treatment of waste natural gas, sweet, burned in production flare"
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",1.958374897738069,"electricity production, lignite"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.08251778611463002,anaerobic digestion of manure
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.010520424463378504,"heat and power co-generation, biogas, gas engine"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.005484503099268283,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.005040497411005032,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.004588600888093682,"treatment of municipal solid waste, unsanitary landfill, wet infiltration class (500mm)"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.0038488274336422345,"heat and power co-generation, biogas, gas engine"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.0038176474376935133,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.0036597859789477293,"electricity production, hydro, reservoir, alpine region"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.0027838481217000843,"treatment of municipal solid waste, open dump, wet infiltration class (500mm)"
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.002476789327296682,"electricity production, hydro, pumped storage"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",13.406370670201383,natural gas venting from petroleum/natural gas production
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",6.610632697923047,"electricity production, lignite"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",4.206267474035681,"heat and power co-generation, hard coal"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",3.5520413410905736,"sweet gas, burned in gas turbine"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",2.9428465426656985,"heavy fuel oil production, petroleum refinery operation"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",2.8177931423897946,"electricity production, natural gas, conventional power plant"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",2.789595338256611,"electricity production, hard coal"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",2.5595278493742466,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",2.470983567145069,"treatment of waste natural gas, sweet, burned in production flare"
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",1.958374897738069,"electricity production, lignite"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.0388336291144365,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.03568979786653082,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.02703127375474507,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.01753718001247302,"electricity production, hydro, pumped storage"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.01138035539050965,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.009646361485555525,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.009398389167153458,"electricity production, hydro, pumped storage"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.0078059136802180705,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.00430053802308898,"electricity production, hydro, pumped storage"
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.0037306528500178184,"electricity production, hydro, pumped storage"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",67.10435428734046,coke production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",65.27210098169537,lignite mine operation
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",24.661475967110707,"treatment of water discharge from petroleum/natural gas extraction, onshore"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",17.847566235660175,"wood preservation, pressure vessel, creosote, outdoor use, ground contact"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",10.786889545052778,"coke production, wet quenching"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",9.248745020407739,"treatment of drilling waste, landfarming"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",8.971013606517324,ammonium sulfate production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",8.39892960369014,hard coal mine operation and hard coal preparation
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",8.221509452004366,hard coal mine operation and hard coal preparation
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",6.137706911341703,"treatment of sulfidic tailings, from copper mine operation, tailings impoundment"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",65.27067985562545,lignite mine operation
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",21.788220368569792,"treatment of water discharge from petroleum/natural gas extraction, onshore"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",10.776218900747352,"coke production, wet quenching"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",9.248745020407739,"treatment of drilling waste, landfarming"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",8.97078479258121,ammonium sulfate production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",8.392616052176638,hard coal mine operation and hard coal preparation
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",8.21291009473589,hard coal mine operation and hard coal preparation
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",7.279640913625272,coke production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",6.137706911341703,"treatment of sulfidic tailings, from copper mine operation, tailings impoundment"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",5.862128431272216,"treatment of sulfidic tailings, from zinc-lead mine operation, tailings impoundment"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",59.82471337371518,coke production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",17.847566235660175,"wood preservation, pressure vessel, creosote, outdoor use, ground contact"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",5.216325274012211,"wood preservation, pressure vessel, creosote, outdoor use, ground contact"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",3.7056596042418857,coke production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",2.873255598540911,"treatment of water discharge from petroleum/natural gas extraction, onshore"
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",1.8758413650623718,soybean production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",1.75123767253295,natural gas venting from petroleum/natural gas production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",1.2869679001349719,coke production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.501684741364229,coke production
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.3302857984424093,"bisphenol A production, powder"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",288.5187661879799,"uranium production, in yellowcake, in-situ leaching"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",288.3616137117721,"petroleum and gas production, onshore"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",182.05972145345382,lignite mine operation
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",180.48931726072945,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",168.66876212835953,"uranium mine operation, underground"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",159.22217662211395,"uranium mine operation, underground"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",121.3538090653082,"petroleum and gas production, onshore"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",120.47196396236512,"petroleum and gas production, onshore"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",100.91086484609518,"petroleum and gas production, onshore"
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",91.56976553507432,"petroleum and gas production, onshore"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",0.004899725737752761,"treatment of spoil from lignite mining, in surface landfill"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",0.0011362239864405258,"treatment of spoil from hard coal mining, in surface landfill"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",5.442694723730471e-05,market for wastewater from vegetable oil refinery
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",4.029699073635988e-05,"market for wastewater, average"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",2.5705565927370076e-05,"treatment of sulfidic tailings, from copper mine operation, tailings impoundment"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",1.9243764963152496e-05,"treatment of sulfidic tailings, from copper mine operation, tailings impoundment"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",1.6514623943236665e-05,"treatment of sulfidic tailings, from copper mine operation, tailings impoundment"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",1.54361145808512e-05,"treatment of sulfidic tailings, from copper mine operation, tailings impoundment"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",1.2243577787325654e-05,"treatment of wastewater from vegetable oil refinery, wastewater treatment"
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",1.076921025831431e-05,"treatment of sulfidic tailings, from gold mine operation, tailings impoundment"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.005248435444151279,"transport, freight, sea, tanker for petroleum"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.0045539418054193976,"electricity production, hard coal"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.0032537740945478262,"diesel, burned in building machine"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.003038321088441743,"heat and power co-generation, hard coal"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.002163965491107568,"transport, freight, sea, bulk carrier for dry goods"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.001756348258315229,blasting
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.0016909150116343064,"electricity production, lignite"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.0013443772344790468,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.001324070922504449,"electricity production, lignite"
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.0012237156749637802,"heavy fuel oil production, petroleum refinery operation"
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.05851063510925905,"transport, freight, sea, tanker for petroleum"
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.049870933688283124,"electricity production, hard coal"
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.035679850440239226,"diesel, burned in building machine"
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.03327313259582502,"heat and power co-generation, hard coal"
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.028858080567870585,blasting
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.024148790920946326,"transport, freight, sea, bulk carrier for dry goods"
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.018517476511751518,"electricity production, lignite"
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.01472248675487135,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.014539462073940839,blasting
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.014500109135391539,"electricity production, lignite"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.6355518217395e-07,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.632512279301621e-08,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",5.669681311667881e-09,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.210150386487408e-09,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.0110088292857647e-09,"treatment of lignite ash, opencast refill"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2691397891905234e-09,"chlor-alkali electrolysis, membrane cell"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2287173946507149e-09,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2247716635646964e-09,"wood preservation, pressure vessel, creosote, outdoor use, ground contact"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2081831059709013e-09,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.1485729958110056e-09,"hard coal, import from ZA"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.0110088292857647e-09,"treatment of lignite ash, opencast refill"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.227850491423786e-09,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2073306904020275e-09,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.1485729958110056e-09,"hard coal, import from ZA"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",6.516475795438542e-10,"treatment of electric arc furnace slag, residual material landfill"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",5.097349183186345e-10,"heavy fuel oil production, petroleum refinery operation"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",3.6651951350380936e-10,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",3.0048715429102206e-10,"sodium chlorate production, powder"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.930256773519088e-10,zinc mine operation
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.412935376841875e-10,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.6355491137900026e-07,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.632510601944966e-08,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",5.669675486242517e-09,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.210148115625034e-09,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2691097713422591e-09,"chlor-alkali electrolysis, membrane cell"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2247716635646964e-09,"wood preservation, pressure vessel, creosote, outdoor use, ground contact"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.0886273745548972e-09,coke production
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",8.48618986703865e-10,"chlor-alkali electrolysis, membrane cell"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",8.310912894221257e-10,"coke production, wet quenching"
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",7.161060350990913e-10,"chlor-alkali electrolysis, average production"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2306204715921517e-07,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2100543742441122e-07,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",8.507962372166328e-08,"hard coal, import from ZA"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",6.315994284572586e-08,"treatment of lignite ash, opencast refill"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",4.1472311790651614e-08,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.6240263097947148e-08,"treatment of waste natural gas, sweet, burned in production flare"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.5566761912252148e-08,natural gas venting from petroleum/natural gas production
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.518797080935043e-08,"heat and power co-generation, hard coal"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.4183788891159547e-08,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.9196478350003694e-08,"sweet gas, burned in gas turbine"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2306204450417026e-07,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2100543481373746e-07,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",8.507962372166328e-08,"hard coal, import from ZA"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",6.315994284572586e-08,"treatment of lignite ash, opencast refill"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",4.147038058213994e-08,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.6239839121580833e-08,"treatment of waste natural gas, sweet, burned in production flare"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.5184388328108658e-08,"heat and power co-generation, hard coal"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.4183788369398002e-08,"smelting of copper concentrate, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.9193968261515122e-08,"sweet gas, burned in gas turbine"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.841678707045455e-08,"electricity production, lignite"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.4066411693580515e-08,natural gas venting from petroleum/natural gas production
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",6.083529462517354e-09,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",5.78490887514429e-09,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.824151922045217e-09,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.5640147388374668e-09,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.467226139305687e-09,molybdenite mine operation
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.233283512975245e-09,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2168689835889935e-09,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",9.291809786081792e-10,hard coal mine operation and hard coal preparation
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",9.035922830320986e-10,hard coal mine operation and hard coal preparation
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",5.10827602334417,"treatment of spent nuclear fuel, reprocessing"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",2.2783604467898115,"treatment of low level radioactive waste, plasma torch incineration"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",1.339990199863322,"electricity production, nuclear, boiling water reactor"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",1.067862512157424,"electricity production, nuclear, boiling water reactor"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",0.44691231751605165,"electricity production, nuclear, boiling water reactor"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",0.39737945003646313,"electricity production, nuclear, pressure water reactor"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",0.3601872977283721,"electricity production, nuclear, boiling water reactor"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",0.32995674611590964,"uranium mine operation, underground"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",0.311476948338213,"uranium mine operation, underground"
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",0.2387857868232105,"electricity production, nuclear, pressure water reactor"
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",66.926205159782,onshore petroleum field infrastructure construction
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",49.822958264819995,"hardwood forestry, birch, sustainable forest management"
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",37.95224109257199,"softwood forestry, pine, sustainable forest management"
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",36.84631545514049,"softwood forestry, spruce, sustainable forest management"
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",25.684905843896242,"hardwood forestry, beech, sustainable forest management"
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",17.071518573198105,"softwood forestry, mixed species, sustainable forest management"
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",14.525515617538854,road construction
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",10.886816498901002,"chemical factory construction, organics"
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",10.64056545207373,"softwood forestry, spruce, sustainable forest management"
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",8.8178933874506,"softwood forestry, pine, sustainable forest management"
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",0.00012078920401322878,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",0.00010241138801560948,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",5.024630368893327e-05,"gold mine operation and gold production, unrefined"
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",3.815701494612555e-05,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",3.447172006815643e-05,zinc mine operation
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",2.4625549361342457e-05,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",2.4313279291006662e-05,silver-gold mine operation with refinery
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",1.9110239146338086e-05,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",1.8777613615848535e-05,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",1.8266557639650755e-05,"copper mine operation and beneficiation, sulfide ore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",7.600779978616636e-07,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",3.2452501425738957e-07,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",2.621158037338422e-07,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",2.56288917033531e-07,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",2.324930783273481e-07,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",1.6186608409959828e-07,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",1.2468869950389125e-07,"transport, pipeline, onshore, long distance, natural gas"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",1.1759913524818746e-07,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",9.178363421345889e-08,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",9.161515699840298e-08,"petroleum and gas production, offshore"
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",2.790340764805808e-07,"heavy fuel oil production, petroleum refinery operation"
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",2.5752758191625885e-07,"electricity production, hard coal, at coal mine power plant"
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",1.9948077589097748e-07,"diesel, burned in building machine"
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",7.337502785112663e-08,"heat production, at hard coal industrial furnace 1-10MW"
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",4.022113247514703e-08,blasting
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",3.774891969240109e-08,"heat and power co-generation, oil"
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",3.4565061390418246e-08,"electricity production, lignite"
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",3.290922070335147e-08,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014"
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",2.6329661823797066e-08,iron sinter production
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",2.5354576356237687e-08,"electricity production, oil"
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.21277802423942954,natural gas venting from petroleum/natural gas production
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.014725544326476433,"transport, freight, sea, tanker for petroleum"
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.013329178365287263,"electricity production, hard coal"
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.011483529834717905,"heavy fuel oil production, petroleum refinery operation"
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.00946041710043129,"diesel, burned in building machine"
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.009445975410207504,"heat and power co-generation, hard coal"
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.006291736623767608,market for petroleum
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.006099794794660412,"transport, freight, sea, bulk carrier for dry goods"
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.005336680286237938,"electricity production, lignite"
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.0051636824646310265,blasting
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",48.62559636872887,"industrial gases production, cryogenic air separation"
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",12.151564940540824,"electricity production, hydro, reservoir, alpine region"
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",2.99279337064388,carbon monoxide production
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",2.8340993176206277,"electricity production, nuclear, pressure water reactor"
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",2.542976331620345,"electricity production, hydro, reservoir, alpine region"
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",1.4709601601104767,"heat and power co-generation, lignite"
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",1.2497170400858792,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",1.150709133904538,"electricity production, nuclear, pressure water reactor, heavy water moderated"
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",1.1485444334751411,"electricity production, hydro, reservoir, non-alpine region"
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",1.0054285797872442,"electricity production, hydro, reservoir, alpine region"

@@ -1,0 +1,226 @@
+Category,Score,Exchange,Contribution
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.41848842038207057,syngas,91.65077825226741
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",6.087841604468194e-05,heat CHP,0.013332637027725679
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",7.049078941781714e-05,electricity CHP,0.015437788467029296
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.03669958709878547,syncrude,8.037368670965183
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",0.0012745592283145688,H2,0.27913399634090413
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",7.812461870319833e-07,C1C4,0.00017109630173930949
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",1.0872072773912798e-05,H20,0.0023810310689951087
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",2.2204115008309374e-06,naphta,0.00048627974438491595
+"('EF v3.1 no LT', 'acidification no LT', 'accumulated exceedance (AE) no LT')",4.1662112161119465e-06,jet fuel,0.0009124183172652118
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",87.57022681707538,syngas,94.5603394426048
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",0.15645538535589218,heat CHP,0.1689441135944611
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",0.1811588464179342,electricity CHP,0.1956194774520133
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",4.540032908226505,syncrude,4.902431665265296
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",0.15767380008149562,H2,0.1702597857609338
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",9.65646656016361e-05,C1C4,0.00010427274074014202
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",0.00134382489058671,H20,0.0014510929390504058
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",0.0002744503558991306,naphta,0.00029635778913964243
+"('EF v3.1 no LT', 'climate change no LT', 'global warming potential (GWP100) no LT')",0.0005149577682267325,jet fuel,0.000556063209289656
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.14816765591867728,syngas,90.5405597737034
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",4.7651978158862155e-07,heat CHP,0.0002911861397871929
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",5.517596836397162e-07,electricity CHP,0.000337162859920794
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.014958315402514197,syncrude,9.140552581587572
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",0.0005196983156218854,H2,0.3175711738038296
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",4.891844113729875e-08,C1C4,2.9892509376398098e-05
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",6.807647331395062e-07,H20,0.00041599375808763853
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",1.3903308727384885e-07,naphta,8.495871430772654e-05
+"('EF v3.1 no LT', 'climate change: biogenic no LT', 'global warming potential (GWP100) no LT')",2.608711076276665e-07,jet fuel,0.0001594100680539794
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",87.22510992684046,syngas,94.5600941805503
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",0.15645455111021075,heat CHP,0.16961121746210384
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",0.18115788044936154,electricity CHP,0.196391913420441
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",4.521081706293746,syncrude,4.901271116811138
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",0.15701548851559613,H2,0.17021932553932062
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",9.645323162179269e-05,C1C4,0.00010456423240767502
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",0.0013422741395450345,H20,0.0014551494306851965
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",0.0002741336448616436,naphta,0.000297186249440288
+"('EF v3.1 no LT', 'climate change: fossil no LT', 'global warming potential (GWP100) no LT')",0.0005143635157306746,jet fuel,0.000557617669170341
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.19694923431624364,syngas,97.94427593273788
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",3.577258998325236e-07,heat CHP,0.00017789967228419888
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",4.142088890092763e-07,electricity CHP,0.00020598907053263592
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.003992886530243371,syncrude,1.9856912947338847
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",0.00013861325027759514,H2,0.06893336996336169
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",6.25155387060953e-08,C1C4,3.108942867623298e-05
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",8.699863085360004e-07,H20,0.0004326504713602038
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",1.7767795021317105e-07,naphta,8.836052723565624e-05
+"('EF v3.1 no LT', 'climate change: land use and land use change no LT', 'global warming potential (GWP100) no LT')",3.333813884302883e-07,jet fuel,0.00016579297102939963
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",311.00871649471844,syngas,83.41698446384791
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.007347515762372589,heat CHP,0.001970708779823283
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.008507648851594751,electricity CHP,0.0022818730615526165
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",59.68108977247758,syncrude,16.00732157749932
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",2.072868203848733,H2,0.5559728894575549
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.002497882143116939,C1C4,0.0006699677046782942
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.034761329900113574,H20,0.009323485685230653
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.0070993322340145125,naphta,0.0019041424090714839
+"('EF v3.1 no LT', 'ecotoxicity: freshwater no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.013320646902246545,jet fuel,0.003572787953394785
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",221.1016307182517,syngas,80.23764638396007
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.004166542715290853,heat CHP,0.0015120357997684142
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.004824417325974627,electricity CHP,0.0017507780931000055
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",52.592993323144256,syncrude,19.08596506876903
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",1.8268099948851182,H2,0.6629482283966532
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.0012147426095309882,C1C4,0.0004408293490846263
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.016904748172361903,H20,0.006134722759201705
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.003452469279880881,naphta,0.001252898987360114
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, inorganics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.006477950700461976,jet fuel,0.0023508443420697375
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",89.90708577646677,syngas,92.42309018571791
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.003180973047081735,heat CHP,0.003269990972009979
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.003683231525620122,electricity CHP,0.0037863049005240016
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",7.08809644933332,syncrude,7.2864532503096004
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.24605820896361577,H2,0.25294402372825076
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.001283139533585951,C1C4,0.0013190475456887273
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.017856581727751678,H20,0.018356289153180612
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.0036468629541336318,naphta,0.003748918572923765
+"('EF v3.1 no LT', 'ecotoxicity: freshwater, organics no LT', 'comparative toxic unit for ecosystems (CTUe) no LT')",0.006842696201784566,jet fuel,0.00703418560071426
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",2964.2991263893205,syngas,98.27734478655492
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",0.005507133614533581,heat CHP,0.0001825815971819237
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",0.0063766802939310245,electricity CHP,0.00021141024610550163
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",50.18227088252834,syncrude,1.6637255983345085
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",1.7425742295157107,H2,0.05777270142736219
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",0.0009996781348600367,C1C4,3.31429820494832e-05
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",0.013911841891962755,H20,0.00046122837943747265
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",0.0028412258064327376,naphta,9.419701463642873e-05
+"('EF v3.1 no LT', 'energy resources: non-renewable no LT', 'abiotic depletion potential (ADP): fossil fuels no LT')",0.005331059948949538,jet fuel,0.0001767441119610874
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",0.006168213140983597,syngas,96.72350202601604
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",2.344009003848405e-08,heat CHP,0.0003675631085546075
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",2.7141153764985866e-08,electricity CHP,0.0004255993399017669
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",0.0002017710641472085,syncrude,3.163963936680999
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",7.011555724918197e-06,H2,0.1099479231446443
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",4.958095812325387e-09,C1C4,7.77477008961081e-05
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",6.899845322308072e-08,H20,0.0010819619681706404
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",1.4091605369279834e-08,naphta,0.00022096989668356548
+"('EF v3.1 no LT', 'eutrophication: freshwater no LT', 'fraction of nutrients reaching freshwater end compartment (P) no LT')",2.6440416256421206e-08,jet fuel,0.0004146111032309194
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.060050625496535344,syngas,93.3647667631672
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",2.9572901379035774e-05,heat CHP,0.04597898884372357
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",3.424230292150626e-05,electricity CHP,0.0532388230641262
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.004060669891363654,syncrude,6.313397973369267
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",0.00014095444920095567,H2,0.21915141041515393
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",9.660511906683194e-08,C1C4,0.00015019850892848978
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",1.3443878539968151e-06,H20,0.002090210674573063
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",2.7456533033466955e-07,naphta,0.00042688527914546684
+"('EF v3.1 no LT', 'eutrophication: marine no LT', 'fraction of nutrients reaching marine end compartment (N) no LT')",5.151734975105694e-07,jet fuel,0.0008009750612908188
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.6751820131018617,syngas,92.0401731394223
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.0003237550885119161,heat CHP,0.04413398731478083
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.00037487426989707054,electricity CHP,0.05110250575000953
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.05573117345586019,syncrude,7.597220830239568
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",0.001934825447528907,H2,0.2637535741910448
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",1.1494298371449655e-06,C1C4,0.00015668918775903467
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",1.599583466182754e-05,H20,0.00218053704514499
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",3.26684119827958e-06,naphta,0.00044533270092206686
+"('EF v3.1 no LT', 'eutrophication: terrestrial no LT', 'accumulated exceedance (AE) no LT')",6.129652290323469e-06,jet fuel,0.0008355884000729653
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.808847110994396e-07,syngas,90.0665858324518
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.5222065667886206e-11,heat CHP,0.004881004304782276
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.762554769348125e-11,electricity CHP,0.005651688544973529
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.9781004481784414e-08,syncrude,9.549374851469512
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.0342847830986908e-09,H2,0.33164674156714147
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",5.653757222746079e-12,C1C4,0.0018128954338067565
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",7.867950076691243e-11,H20,0.02522883492426482
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.606877290241092e-11,naphta,0.005152503702221108
+"('EF v3.1 no LT', 'human toxicity: carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",3.015022299701067e-11,jet fuel,0.009667765955643151
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2047039286799752e-08,syngas,88.71168543890028
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",5.266177486323168e-13,heat CHP,0.00387789455575206
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",6.097678493355368e-13,electricity CHP,0.004490193179686941
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.4790310737008408e-09,syncrude,10.891251886949116
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",5.137451011004593e-11,H2,0.3783103277046491
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",6.108216872415451e-14,C1C4,0.0004497953404800827
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",8.500390716534007e-13,H20,0.006259496374177031
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.7360411120349702e-13,naphta,0.001278381595456358
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",3.257375468414238e-13,jet fuel,0.002398657969240485
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.6883767181263985e-07,syngas,90.12827057792666
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.4695447919253893e-11,heat CHP,0.004926673026886672
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.7015779844145715e-11,electricity CHP,0.005704568111854519
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.8301973408083572e-08,syncrude,9.488283022294462
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",9.829102729886447e-10,H2,0.3295222817562699
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",5.592675054021926e-12,C1C4,0.0018749534881949143
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",7.782946169525903e-11,H20,0.026092454734146668
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.589516879120742e-11,naphta,0.0053288814176838195
+"('EF v3.1 no LT', 'human toxicity: carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.982448545016925e-11,jet fuel,0.009998707682506826
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",8.963433987307097e-07,syngas,92.1707139460355
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",5.074270979057219e-11,heat CHP,0.005217857124374988
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",5.875470984184607e-11,electricity CHP,0.006041728607009121
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",7.337397507634702e-08,syncrude,7.545023121074294
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.5484698336342605e-09,H2,0.262058363311017
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",4.610374239397787e-12,C1C4,0.0004740833544436807
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",6.415944817104552e-11,H20,0.006597496174661482
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",1.3103331772004472e-11,naphta,0.001347411545851377
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic no LT', 'comparative toxic unit for human (CTUh) no LT')",2.4586094864186847e-11,jet fuel,0.002528180516514155
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",8.461909460559194e-07,syngas,92.14051981206806
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",4.879793870706365e-11,heat CHP,0.005313537634954973
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",5.650286989888759e-11,electricity CHP,0.006152516553885594
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",6.955727690400291e-08,syncrude,7.573992230145242
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.4159551394162502e-09,H2,0.26306989388863056
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",4.356633463798668e-12,C1C4,0.0004743875762983316
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",6.062831006910717e-11,H20,0.006601729823667494
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.2382164813724034e-11,naphta,0.0013482761871335793
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, inorganics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.3232952048473228e-11,jet fuel,0.0025298028636360635
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",5.015245267479033e-08,syngas,92.68316094483455
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.9447710835085307e-12,heat CHP,0.0035939923517296847
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.2518399429584847e-12,electricity CHP,0.004161464349681495
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",3.8166981723441e-09,syncrude,7.053366926619666
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.3251469421801035e-10,H2,0.24489092909182902
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",2.5374077559911896e-13,C1C4,0.00046892018014787167
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",3.531138101938358e-12,H20,0.0065256437834175915
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",7.211669582804393e-13,naphta,0.0013327370785995597
+"('EF v3.1 no LT', 'human toxicity: non-carcinogenic, organics no LT', 'comparative toxic unit for human (CTUh) no LT')",1.353142815713625e-12,jet fuel,0.0025006464625641923
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",12.977871529839504,syngas,99.16759620051978
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",8.400321617823618e-06,heat CHP,6.41892393706822e-05
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",9.726687070329267e-06,electricity CHP,7.432437388068043e-05
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",0.10522448768069935,syncrude,0.8040501464923353
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",0.003656142882715869,H2,0.02793762445643931
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",1.5865141636053651e-06,C1C4,1.2123004575987501e-05
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",2.207844048377383e-05,H20,0.0001687076240196969
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",4.509096304819873e-06,naphta,3.445528340741426e-05
+"('EF v3.1 no LT', 'ionising radiation: human health no LT', 'human exposure efficiency relative to u235 no LT')",8.460525264186054e-06,jet fuel,6.464927250312165e-05
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",372.1001675623814,syngas,91.2067273287521
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",0.004051578491821018,heat CHP,0.0009930960718866257
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",0.004691300872005186,electricity CHP,0.0011499005825585432
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",34.50315327458033,syncrude,8.457184293444902
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",1.1981072133707282,H2,0.2936721008119281
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",0.007115837641790115,C1C4,0.001744186969229506
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",0.09902628130935487,H20,0.024272665870940426
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",0.02022421101074717,naphta,0.004957224586003778
+"('EF v3.1 no LT', 'land use no LT', 'soil quality index no LT')",0.037947170926856275,jet fuel,0.00930135907838068
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",0.0005274177380071755,syngas,83.41845521838131
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",2.0190097217949805e-08,heat CHP,0.0031933448560036806
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",2.3378004616138222e-08,electricity CHP,0.003697556776408429
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",0.00010115556954748798,syncrude,15.999161082959592
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",3.5136541895165813e-06,H2,0.5557333087972083
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",5.4108157466808745e-09,C1C4,0.0008557958114280756
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",7.529864918462563e-08,H20,0.011909529282700839
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",1.5378299071705438e-08,naphta,0.002432292014476164
+"('EF v3.1 no LT', 'material resources: metals/minerals no LT', 'abiotic depletion potential (ADP): elements (ultimate reserves) no LT')",2.8854670430812703e-08,jet fuel,0.004563767692510093
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",3.3858883869365182e-06,syngas,97.39985578679652
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",6.855821600907368e-12,heat CHP,0.00019721737958189282
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",7.938318835381086e-12,electricity CHP,0.0002283569395668401
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",8.733011581448402e-08,syncrude,2.5121739744856093
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",3.0326482562223377e-09,H2,0.08723840512515797
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",4.646138667292774e-13,C1C4,1.3365273288562765e-05
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",6.465715743253736e-12,H20,0.0001859954342798427
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",1.3204979304289294e-12,naphta,3.79859857421084e-05
+"('EF v3.1 no LT', 'ozone depletion no LT', 'ozone depletion potential (ODP) no LT')",2.477681856064204e-12,jet fuel,7.127401375582921e-05
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",1.7550478039411616e-06,syngas,85.54939340082618
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",5.210981454655677e-10,heat CHP,0.025400806830882965
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",6.033767306144811e-10,electricity CHP,0.02941145715821943
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",2.852300496189328e-07,syncrude,13.903471842642363
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",9.901755739625245e-09,H2,0.4826587601920885
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",8.587329315551327e-12,C1C4,0.0004185873525660256
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",1.1950403189411866e-10,H20,0.005825195994397872
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",2.4406397228140627e-11,naphta,0.0011896841061983035
+"('EF v3.1 no LT', 'particulate matter formation no LT', 'impact on human health no LT')",4.5794306973599486e-11,jet fuel,0.002232232748307522
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.4076258120527127,syngas,96.4551642281461
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",8.442743033406468e-05,heat CHP,0.01997778702291672
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",9.77580659851262e-05,electricity CHP,0.023132171787006293
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.014294095771675688,syncrude,3.382365184890533
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",0.0004961481391068481,H2,0.11740191328426361
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",3.5890261554119447e-07,C1C4,8.492595341204845e-05
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",4.994604030946469e-06,H20,0.001181856834908196
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",1.0200516923525773e-06,naphta,0.00024137149954169945
+"('EF v3.1 no LT', 'photochemical oxidant formation: human health no LT', 'tropospheric ozone concentration increase no LT')",1.9139473922301765e-06,jet fuel,0.0004528911187246419
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",91.4116492384891,syngas,96.15687736812653
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",0.011548944401461092,heat CHP,0.012148456348767224
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",0.01337246040048027,electricity CHP,0.014066632049098806
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",3.506173870902326,syncrude,3.6881812519987838
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",0.12179089044920262,H2,0.12811312141328207
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",2.533933942226446e-05,C1C4,2.6654718230267984e-05
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",0.0003526303831169383,H20,0.0003709356169385677
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",7.201796515693094e-05,naphta,7.575645666155664e-05
+"('EF v3.1 no LT', 'water use no LT', 'user deprivation potential (deprivation-weighted water consumption) no LT')",0.00013512903085129957,jet fuel,0.0001421436518943279

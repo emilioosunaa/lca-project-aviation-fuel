@@ -86,7 +86,7 @@ print(df_pivot)
 df_relative = df_pivot.div(df_pivot.max(axis=0), axis=1) * 100
 
 # Export the filtered and relative results to an Excel file
-with pd.ExcelWriter("data//Filtered_MultiLCA_selected_categories.xlsx") as writer:
+with pd.ExcelWriter("data//filtered_multilca_selected_categories.xlsx") as writer:
     # Write all absolute results grouped by Impact Category in "Filtered Results" sheet
     df_scores.to_excel(writer, sheet_name="Filtered Results", index=False)
 
